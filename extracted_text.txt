@@ -1,0 +1,3202 @@
+
+
+--- Page 1 ---
+
+Nature Neuroscience
+nature neuroscience
+https://doi.org/10.1038/s41593-026-02341-w
+Article
+A fatty acid amide activates myeloid cells 
+and improves neurovascular outcomes in 
+retinal degeneration
+ 
+Guoqin Wei 
+  1,2, Shreyosree Chatterjee3, Qinglin Yang4,5, 
+Sanahan Vijayakumar4,5, Daisuke Ogasawara 
+  3, Sarah Giles2, Katie Biscocho1, 
+Peter Westenskow1, Junhua Wang3, Ruhan Fan4,5, Helena Pham1,2, Edith Aguilar1, 
+Jacob Robinson1, Ayumi Usui-Ouchi1, Roberto Bonelli2, Kevin Eade2, 
+Gary Siuzdak 
+  3,6, Benjamin Cravatt 
+  3, Michael J. Sailor 
+  4,5, Dale Boger 
+  3 & 
+Martin Friedlander 
+  1,2 
+N­eu­rovasculoglial cross-talk underlying breakdown of the neurovascular 
+unit is a central, yet poorly understood, component of m­an­y n­eu­ro­de­ge­
+ne­rative disorders of the CNS, including retinal disease. Primary fatty acid 
+amides have been identified to regulate this cross-talk between vasculature 
+and neuronal tissues, but specific molecules and mechanisms remain 
+unresolved. Here we show, using an unbiased high-resolution metabolomics 
+screen, that erucamide, a 22:1 m­o­n­ou­n­s­at­urated omega-9 fatty acid 
+amide, is highly dysregulated during photoreceptor degeneration in mice. 
+In vivo delivery of erucamide using organosilane-modified porous silicon 
+nanoparticles activated retinal myeloid cells, leading to the upregulation of 
+angiogenic and neurotrophic cytokines that l­i­m­it­ed v­a­s­cu­lar and neuronal 
+degeneration. We identified TMEM19 as a binding protein for erucamide that 
+is crucial for myeloid cell activation and subsequent neuroprotection. These 
+findings reveal a previously unknown primary fatty acid amide pathway that 
+modulates neuroimmune interactions during retinal degenerative diseases. 
+We propose erucamide and analogs as candidate therapeutics.
+The vast majority of diseases that lead to catastrophic loss of vision do 
+so as a result of breakdown in the neurovascular and glial unit of the ret-
+ina. Retinal pigmented epithelial (RPE) cell malfunction and subsequent 
+photoreceptor degeneration can lead to vision loss, exemplified by con-
+ditions such as age-related macular degeneration (AMD)1. Other leading 
+causes of vision loss are inherited retinal degenerations such as retini-
+tis pigmentosa2,3 and neurovascular retinal diseases such as diabetic 
+retinopathy4. These diseases either do not have a clear genetic basis 
+(for example, diabetic retinopathy) or are genetically heterogeneous 
+(for example, retinitis pigmentosa)5. While these diseases have differ-
+ent underlying causes, they share similar pathologies with functional 
+loss of the interconnected vasculature, glia, photoreceptors and RPE, 
+leading to vascular anomalies and photoreceptor death.
+Photoreceptors convert light into electrical signals through a 
+collaboration between cells of the neurosensory retina and the RPE 
+and choriocapillaris. This phototransduction process begins in the 
+photosensitive outer segments of rod and cone photoreceptors. 
+The RPE plays a critical role in this process by interdigitating with 
+Received: 3 December 2024
+Accepted: 13 May 2026
+Published online: xx xx xxxx
+ Check for updates
+1Department of Molecular and Cellular Biology, Scripps Research, La Jolla, CA, USA. 2Lowy Medical Research Institute, La Jolla, CA, USA. 3Department 
+of Chemistry, Scripps Research, La Jolla, CA, USA. 4Department of Chemistry and Biochemistry, University of California, San Diego, La Jolla, CA, 
+USA. 5Materials Science and Engineering Program, University of California, San Diego, La Jolla, CA, USA. 6Department of Integrative Structural and 
+Computational Biology, The Scripps Research Institute, La Jolla, CA, USA. 
+ e-mail: friedlan@scripps.edu
+
+
+--- Page 2 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+a database we developed (METLIN)17,18. Of all the untargeted metabo-
+lites, PFAMs emerged as one of the most severely dysregulated classes 
+of metabolites in degenerating retinas (Fig. 1a). Of these, erucamide 
+(22:1, n-9; C22H43NO), a 22:1 monounsaturated omega-9 fatty acid 
+amide whose functions are not completely understood, was the most 
+abundant PFAM in the eyes from wild-type rats (Fig. 1b,c). However, 
+it was significantly reduced in the RCS rat model of photoreceptor 
+atrophy (Fig. 1d,e). Erucamide’s level was also largely decreased in 
+the rd10 mice (B6.CXB1-Pde6brd10/J), a rodent retinitis pigmentosa 
+model of photoreceptor loss, at both postnatal day (P) 12 and P28 
+(Fig. 1f and Extended Data Fig. 1a), suggesting that it may play a role in 
+photoreceptor maintenance.
+Erucamide is present in the CNS of many species10,15,19 and has 
+been shown to regulate angiogenesis and water balance in skeletal 
+muscle and the intestine14,15,19. However, its function in the CNS, biosyn-
+thetic pathway, site of action and potential signaling cascades are all 
+unknown. In addition, detection of erucamide in human retinal tissue 
+has not been previously demonstrated. Using liquid chromatogra-
+phy coupled to mass spectrometry (LC–MS), we detected picogram 
+quantities of erucamide in peripheral retinal tissue from postmortem 
+human donor eyes (n = 6, age range 62–85 years) from Lions NSW Eye 
+Bank, Sydney Local Health District Ethics Review Committee (2020/
+ETH03339), suggesting that it is ubiquitously expressed in the retina 
+across multiple species (Extended Data Fig. 1b,c). As erucamide is 
+highly hydrophobic, direct retinal injection is not possible because 
+it aggregates locally and fails to disperse within the retina after intra-
+vitreal injection. Consequently, we generated functionalized pSiNPs 
+for the delivery of erucamide both in vivo and in cultured tissues. 
+The pores of these particles were functionalized with hydrophobic 
+n-octadecylsilane groups to facilitate loading of erucamide, while the 
+overall particles remain sufficiently hydrophilic to allow full dispersion 
+in aqueous solutions.
+pSiNPs are biocompatible, showing low toxicity in multiple 
+endothelial cell types (Extended Data Fig. 2a, average viability exceeded 
+85% at all tested concentrations), and can biodegrade into silicic acid 
+end products that are readily excreted from the body20. In addition, 
+their tunable pore size and their readily functionalized surface make 
+them amenable to the loading of a wide range of small-molecule and 
+biologic therapeutics. As a result, pSiNPs have been used extensively 
+to deliver drugs to sensitive and hard-to-reach tissues21, including the 
+delivery of small-molecule drugs to the vitreous22,23. Chemical surface 
+functionalization of pSiNPs with n-octadecylsilane (H3Si (CH2)17CH3, 
+referred to here as C18) imparts a hydrophobic character24 to the 
+mesopores (10–15 nm), and thus were chosen for loading of erucamide 
+(Fig. 1g). The nanoparticles maintained desirable sizes (~200 nm) and 
+zeta potential25,26 (−33 mV) after erucamide loading, as shown by the 
+transmission electron microscopy images, dynamic light scattering and 
+zeta potential (ζ-potential) measurements (Extended Data Fig. 2b–d). 
+The loading of erucamide was confirmed by the attenuated total reflec-
+tance Fourier transform infrared spectrum of the erucamide-loaded 
+C18-pSiNPs (Eru-C18-pSi), which displayed the characteristic C = O (at 
+1,690 cm−1) and N-H (at 3,310 cm−1) stretching bands of erucamide. 
+The C-H scissor and stretching modes (at 1,465 cm−1 and 2,849 cm−1, 
+respectively) are assigned to both erucamide and the C18 surface 
+the photoreceptor outer segments where it, among other things, 
+phagocytoses shed outer segments and recycles isomerized opsins. 
+Its functions are necessary for the activity and survival of photorecep-
+tors6. Tightly controlled lipid homeostasis is crucial to regulate the 
+turnover between photoreceptors and RPE cells and to maintain their 
+cellular functions7.
+Distinct lipid mediators, such as specific fatty acid amides, are 
+also essential for maintaining retinal health and function. For exam-
+ple, ceramides are key players in various forms of photoreceptor 
+cell death and are potential drug targets for retinal degenerative dis-
+eases8. Anandamide, also known as N-arachidonoylethanolamide, is a 
+well-characterized neurotransmitter that regulates the endocannabi-
+noid signaling pathway and can modulate visual signal processing by 
+interacting with cannabinoid receptors in the retina9. However, little is 
+known about the specific roles of primary fatty acid amides (PFAMs) in 
+the retina. As a direct extension of the CNS, the retina shares many char-
+acteristics with brain tissue. A better understanding of the biological 
+and pathological functions of PFAMs in the retina is also likely to shed 
+light on their roles in the brain and other neuronal tissues.
+PFAMs10,11 represent a family of endogenous chemical messengers 
+and signaling molecules in the mammalian nervous system. Struc-
+turally, PFAMs consist of a long hydrocarbon chain with an amide 
+group (–CONH2) at one end. PFAMs like palmitamide, oleamide and 
+the other three PFAMs were first discovered in 1989 in luteal phase 
+plasma12. Although their biological functions were initially unclear, 
+interest increased when oleamide was identified as an endogenous 
+sleep-inducing molecule in mammalian cerebrospinal fluid10. Another 
+PFAM, erucamide, was detected in the plasma and cerebrospinal fluid of 
+pig brain13 and was first isolated from bovine mesentery. It was reported 
+to be pro-angiogenic over 34 years ago14,15, although its complete bio-
+logical function remains unclear.
+Given the critical role of PFAMs in the nervous system and the 
+known importance of other fatty acids in the retina, we undertook an 
+untargeted metabolomic and lipidomic screen of normal and degen-
+erating retinas. We found that one of the most profound changes in the 
+retinal lipid profile occurred with a PFAM, erucamide. Erucamide levels 
+decreased drastically in degenerating retinas, indicating a possible neu-
+roprotective function. To address the challenge of in vivo delivery of the 
+hydrophobic erucamide molecule, we utilized organosilane-modified 
+porous silicon nanoparticles (pSiNPs). Intravitreal injections of eru-
+camide nanoparticles led to widespread activation of GS-lectin-positive 
+cells, which were identified as CD11b+ myeloid cells. This activation, 
+driven by TMEM19 protein binding, was accompanied by the upregu-
+lation of angiogenic cytokines and growth factors, as well as neuro-
+protection, suggesting a new therapeutic function for erucamide in 
+retinal diseases.
+Results
+Erucamide is downregulated during retinal degeneration
+Using high-resolution global mass spectrometry-based metabolomics, 
+we cataloged the metabolites dysregulated during retinal degenera-
+tion in an animal model of RPE-mediated retinal degeneration, the 
+Royal College of Surgeons (RCS) rat. Dysregulated features were iden-
+tified using our data processing technology (XCMS)16 combined with 
+Fig. 1 | Erucamide is downregulated in neuron degenerated retinas. a, All 
+PFAMs were detected into the eyes of WT rats, and they were all significantly 
+downregulated in RCS rat eyes compared to WT rat eyes (n ≥ 11). b, Erucamide 
+is the most abundant PFAM in WT rat eyes (n = 11). c, Experimental tandem 
+mass spectrometry (MS/MS) spectral data (collision energy 20 eV) were 
+compared with the reference erucamide MS/MS spectra from the METLIN 
+database (collision energy 20 eV)17,18. The comparison revealed highly consistent 
+fragmentation patterns in both the intensity ratios and accurate masses of the 
+fragment ions. d, LC–MS peak intensity of erucamide in WT and RCS rats.  
+e, Erucamide is highly dysregulated in 1-year-old RCS eyes (two-tailed unpaired 
+t-test, n = 11 for WT rats and n = 16 for RCS rats; t = 7.752, d.f. = 27, P < 0.0001). 
+f, Erucamide level was attenuated in retinal degeneration mouse model rd10 
+compared to age-matched WT mouse retinas. The relative erucamide level in 
+rd10 retinas is 28.4% ± 0.1% of the WT level (two-tailed unpaired t-test, n = 6, 
+t = 7.075, d.f. = 10, P < 0.0001). For e and f, box plots show the median (center  
+line), 25–75th percentile (box bounds) and minimum to maximum values 
+(whiskers). All individual data points are shown. g, Schematic of the silane 
+functionalization to the pSiNPs as well as erucamide loading to the C18-pSiNPs. 
+RT, room temperature. Asterisks denote statistical significance: *P < 0.05,  
+**P < 0.01, ***P < 0.001, ****P < 0.0001.
+
+
+--- Page 3 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+WT_12mo
+RCS_12mo
+f
+d
+e
+53.0
+0
+53.5
+54.0
+54.5
+55.0
+55.5
+Retention time (min)
+1 × 106
+2 × 106
+3 × 106
+4 × 106
+LC–MS peak intensity
+g
+n-Octadecylsilane (C18-silane)
+pSi
+C18-pSi
+Eru-C18-pSi
+90 °C, 24 h
+Erucamide
+RT, 24 h
+Porous Si surface
+[O]
+Octadecylsilane
+a
+b
+c
+WT_12mo
+RCS_12mo
+0
+0.5
+1.0
+1.5
+2.0
+Relative level of erucamide
+–4.1×
+****
+WT_P28
+rd10_P28
+0
+0.5
+1.0
+1.5
+Relative level of erucamide
+–3.5×
+36.0
+50
+Retention time (min)
+40.0
+44.0
+48.0
+52.0
+56.0
+60.0
+Palmitamide (C16:0)
+Linoleamide 
+(C18:2)
+Oleamide
+(C18:1)
+C22:3
+Erucamide (C22:1)
+Stearamide (C18:0)
+Eicosenamide (C20:1)
+(C22:2)
+Linoleamide (C18:2)
+m/z 280.2635
+C18H33NO
+C18H35NO
+C22H39NO
+C16H33NO
+Palmitamide (C16:0)
+m/z 256.2635 
+Oleamide (C18:1)
+m/z 282.2791
+C22:3
+m/z 334.3104
+Stearamide (C18:0)
+m/z 284.2948
+C18H37NO
+C20:1
+m/z 310.3104
+C20H39NO
+C22:2
+m/z 336.3261
+C22H41NO
+Erucamide (C22:1)
+m/z 338.3414
+C22H43NO
+Metabolite
+H2N
+O
+H2N
+O
+H2N
+O
+H2N
+O
+H2N
+O
+H2N
+O
+H2N
+O
+H2N
+O
+Extracted ion chromatogram
+MS/MS
+H3Si
+H3Si
+H3Si
+NH2
+O
+H3Si
+Si
+Si Si
+O
+Si
+Si
+O
+O
+O
+SiH
+O
+O
+Si
+Si
+Si
+Si
+Si
+SiH
+H2
+Si
+H
+H
+NH2
+O
+NH2
+O
+Si
+Si Si
+O
+Si
+Si
+O
+O
+O
+SiH
+O
+O
+Si
+Si
+Si
+Si
+Si
+SiH
+H2
+Si
+H
+H
+Si
+Si
+Si
+Si
+Si
+Si
+H
+H
+Si
+Si
+Si
+H
+H
+Si
+H
+H
+H
+****
+Experimental MS/MS
+20 eV collision energy
+METLIN MS/MS
+Erucamide
+20 eV collision energy
+350 m/z 
+338.3414
+MH+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+Fold chg 12
+Pval 1.1 × 10–3
+RT 39.4 min
+Fold chg 6
+Pval 2.7 × 10–6
+RT 43.1 min
+Fold chg 6
+Pval 3.3 × 10–6
+RT 43.9 min
+Fold chg 10
+Pval 6.9 × 10–6
+RT 46.0 min
+Fold chg 11
+Pval 6.1 × 10–6
+RT 48.9 min
+Fold chg 13
+Pval 4.8 × 10–5
+RT 48.9 min
+Fold chg 6
+Pval 2.6 × 10–4
+RT 49.4 min
+Fold chg 4
+Pval 1.7 × 10–6
+RT 54.1 min
+WT
+RCS
+40
+60
+80 100 120 140 160 180 200 220 240 260
+MH
++
+280
+40
+60
+80 100 120 140 160 180 200 220 240 260 280
+50
+75
+100 125 150
+175 200 225 250 275 300
+50
+75 100 125 150 175 200 225 250 275 300 325 350
+280.264
+225.264
+263.248
+245.229
+MH
++
+MH
++
+MH
++
+MH
++
+247.241
+3299.257
+284.295
+275.275
+293.285
+310.310
+301.288
+319.301
+336.326
+338.341
+321.316
+303.304
+317.285
+334.310
+265.254
+282.279
+MH
++
+MH
++
+MH
++
+50
+75
+100 125 150
+175 200 225 250 275 300
+50
+75 100 125 150 175 200 225 250 275 300 325
+50
+75 100 125 150 175 200 225 250 275 300 325 350
+50
+75 100 125 150 175 200 225 250 275 300 325 350
+
+
+--- Page 4 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+a
+b
+rd10
+P0
+P12
+P22
+P32
+Eru-C18-pSi 1st inj.
+Eru-C18-pSi 2nd inj.
+Tissue sampling
+P16
+PR degeneration begins
+Recoverin
+DAPI
+c
+d
+ONL
+INL
+ONL
+INL
+0
+10
+20
+30
+40
+50
+Avg. thickness (µm)
+1-OD_ERG [RE]
+A
+B
+0
+100
+200
+300
+Time (ms)
+Time (ms)
+Time (ms)
+Time (ms)
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+B
+0
+100
+200
+300
+–160
+–80
+0
+80
+160
+1-OD_ERG [RE]
+A
+0
+100
+200
+300
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+B
+0
+100
+200
+300
+–160
+–80
+0
+80
+160
+ONL
+INL
+Eru-C18-pSi
+Eru-C18-pSi
+C18-pSi
+C18-pSi
+e
+Superficial
+Intermediate
+Deep
+ONL
+f
+Deep
+plexus
+0
+10
+20
+30
+Vascular area (%)
+Superficial +
+inter
+Superficial
+plexus
+Intermediate
+plexus
+Deep
+plexus
+ONL
+NS
+g
+h
+Collagen IV
+CD11b
+Merged with DAPI 
+0
+200
+400
+600
+800
+1,000
+CD11b+ cells per mm2
+retina
+Scotopic B-wave
+(µV, 50 cd s/m2)
+Scotopic A 0.01
+Scotopic B 0.01
+Scotopic A 25
+Scotopic B 25
+Scotopic A 50
+Scotopic B 50
+Photopic A 50
+Photopic B 50
+Average flickers 25
+0
+50
+100
+150
+200
+250
+ERG amplitudes (µV)
+C18-pSi
+Eru-C18-pSi
+(cd s/m2)
+P = 0.16
+P = 0.46
+P = 0.12
+20 µm
+20 µm
+100 µm
+Scotopic B-wave
+(µV, 50 cd s/m2)
+**
+**
+**
+****
+****
+****
+**
+**
++↑
++↑
++↑
++↑
+C18-pSi
+Eru-C18-pSi
+C18-pSi
+Eru-C18-pSi
+B
+
+
+--- Page 5 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+modification27,28, while a band at 1,080 cm−1 is assigned to the Si-O-Si 
+stretching modes from silicon oxides on the surface of the pSiNPs 
+(Extended Data Fig. 2e). Thermogravimetric analysis measurements 
+indicated that the particles were composed of approximately 6% (wt%) 
+erucamide, based on the mass change upon oxidative combustion at 
+950 °C (Extended Data Fig. 2f,g).
+Erucamide delivery via pSiNPs rescues retinal degeneration
+Next, we investigated the potential therapeutic function of erucamide 
+in the mammalian retina. rd10 mice were used in these experiments as 
+vaso-degeneration and photoreceptor degeneration start at P16–P20 
+and occur in a stereotypical temporal sequence29, and erucamide levels 
+are spontaneously attenuated by P12 (Extended Data Fig. 1a). We intra-
+vitreally injected 214 ng of erucamide into the vitreous of rd10 at P12 
+and P22 through Eru-C18-pSi (Fig. 2a). We observed that the extent of 
+photoreceptor atrophy was significantly reduced in rd10 mice at P32 
+with erucamide. The thicknesses of both the outer nuclear layer (ONL)30 
+and the inner nuclear layer (INL) were rescued by erucamide. (Fig. 2b,c). 
+To assess retinal function, we performed electroretinography (ERG) 
+recordings across a range of stimulus intensities. Erucamide-treated 
+rd10 mice exhibited increased scotopic B-wave amplitudes compared 
+with vehicle controls across intensities, reaching statistical significance 
+at higher flash strengths (50 cd s/m2; Fig. 2d,e). These results indicate 
+a rod-dominated, intensity-dependent functional rescue in a geneti-
+cally degenerating retina. Additionally, erucamide significantly pro-
+tected the intraretinal deep plexus vasculature from vaso-obliteration 
+compared to vehicle-injected controls (Fig. 2f,g). Strikingly, we also 
+observed significantly increased numbers of CD11b+ myeloid cells 
+across the retinal layers, especially in the ONL after erucamide treat-
+ment. Our findings are consistent with prior work showing that the neu-
+roprotective effect of IGF-1 in rd10 mice also requires CD11b+ microglia, 
+which infiltrate the ONL and support photoreceptor survival31. Taken 
+together, these data showed that erucamide rescued retinal atrophy 
+both morphologically and functionally in rd10 mice.
+Moreover, we extended our analysis to the RhoP23H model to test 
+whether this pathway applies across different genetic contexts. Unlike 
+rd10, which carries a missense mutation in exon 13 of phosphodiester-
+ase 6B (Pde6b)29, the RhoP23H model carries the p.Pro23His mutation in 
+the rhodopsin gene and shows progressive retinal degeneration similar 
+to that seen in patients with autosomal dominant retinitis pigmentosa32. 
+As shown in Extended Data Fig. 3, Eru produced clear rescue effects on 
+INL thickness and vessel density, and showed intensity-dependent 
+functional improvement in ERG responses. In this advanced disease 
+stage, vascular density was quantified as a combined all-layer metric 
+due to limited anatomical separation of individual plexuses. Together, 
+these complementary models support the broad applicability of our 
+approach across multiple forms of inherited retinal degeneration.
+Erucamide targets CD11b+ myeloid cells
+To evaluate the effects of erucamide on healthy ocular tissue and to 
+determine the cellular and biological target of erucamide, it was intra-
+vitreally administered into 1-month-old wild-type (WT) C57BL/6J mouse 
+retinas. Eru-C18-pSi injected mice showed an infiltration of GS-lectin+ 
+cells at 3 days after injection, while retinas injected with C18-pSiNPs 
+maintained a normal appearance similar to the non-injected control 
+group (Fig. 3a). Further staining with collagen IV33 and CD11b34 revealed 
+that the GS-lectin+ active signals were CD11b+ myeloid cells but not colla-
+gen IV+ endothelial cells (Fig. 3b). These results suggest that erucamide 
+might directly target CD11b+ myeloid cells in the retina. We synthesized 
+a fluorescent dye (BODIPY)-labeled erucamide (BDPErucamide; Fig. 3c) 
+to directly observe the cellular targets. Strikingly, all BDPErucamide was 
+taken up by CD11b+ cells, providing additional evidence that CD11b+ cells 
+are the direct target of erucamide in the retinas (Fig. 3d). As observed 
+in rd10 mice, CD11b+ cells in WT C57BL/6J retinas were activated across 
+the retinal vascular layers by erucamide; however, unlike rd10 retinas, 
+erucamide-induced CD11b+ cell accumulation in the ONL was not sig-
+nificant in WT eyes (Fig. 3e,f). Also, there was no aggressive choroidal 
+neovascularization in both rd10 and WT mice after erucamide intra-
+vitreal injections (Extended Data Fig. 1d–f).
+To further explore the potential effects of erucamide on the target 
+cells, we isolated CD11b+ cells by flow cytometry and evaluated the 
+expression of pro-angiogenic genes within the cells by quantitative PCR 
+(qPCR). We found that the expression of PDGFα, CTGF, PDGFβ, CX3CL1, 
+Ang1 and BDNF was higher in CD11b+ cells of erucamide-treated ani-
+mals (Fig. 3g). Furthermore, the findings translated to human tissue. 
+Treatment of human induced pluripotent stem (iPS) cell-derived mac-
+rophage precursor cells (MPCs)35 with erucamide led to significantly 
+higher levels of PDGFα, VEGF, FGF-2, IGF-1 and BDNF compared to 
+Fig. 2 | Erucamide is neurotrophic. a, Schematic of Eru-C18-pSi (214 ng) 
+intravitreal injection in rd10 mice. PR, photoreceptors. b, Retinas from P32 rd10 
+mice injected with control (top image) or erucamide (bottom image)-containing 
+pSiNPs. Photoreceptors were immunolabeled green (recoverin). c, Quantified 
+effects of erucamide injections in retinal layer thicknesses in b (two-way analysis 
+of variance (ANOVA) with Fisher’s least significant difference (LSD) post hoc test, 
+n = 6 mice for both groups; ONL: Eru versus vehicle, P = 0.0033. INL: Eru versus 
+vehicle, P = 0.0047). d, ERG measurements of all scotopic waves and photopic 
+responses to a flash in dark-adapted rd10 mice injected with Eru or vehicle at 
+P32 (two-sided multiple unpaired t-test, n = 6 per group). Eru versus vehicle, 
+P = 0.0048 at 50 cd s/m2 intensity. e, Representative traces of scotopic B-wave 
+at 50 cd s/m2 intensity by ERG in eyes treated with vehicle (left) and erucamide 
+(right). f, Retinal flat-mount staining of retinas injected with vehicle and Eru. 
+Vasculature is immunolabeled in red with collagen IV, and CD11b+ myeloid cells 
+were labeled in green. g, Vascular density quantification of retinal vessels of 
+superficial + intermediate, and deep plexus (SP + IP, and DP). Two-way ANOVA 
+with Fisher’s LSD post hoc test, n = 7, SP + IP: Eru versus vehicle, t = 0.6786, 
+d.f. = 24, P = 0.7538. DP: t = 6.26, d.f. = 24, P < 0.0001. h, CD11b+ myeloid cells 
+quantification in different layers. Two-sided multiple unpaired t-test, n = 7 for 
+vehicle, n = 8 for Eru, Eru versus vehicle, SP: P = 0.004044, IP: P = 0.000002, DP: 
+P = 0.002311, ONL: P = 0.000045. For c, d, g and h, box plots show the median 
+(center line), 25–75th percentile (box bounds) and minimum to maximum values 
+(whiskers). All individual data points are shown. Asterisks denote statistical 
+significance: *P < 0.05, **P < 0.01, ***P < 0.001, ****P < 0.0001. NS, not significant.
+Fig. 3 | Erucamide delivered by pSi targets CD11b+ cells in WT retinas.  
+a, Eru-C18-pSiNP (214 ng, 1 μl)-injected retinas exhibit increasing GS-lectin-
+positive active signals compared to vehicle treated and non-injected eyes. b, The 
+GS-lectin-positive active signals are CD11b+ MPCs (highlighted by white arrows). 
+c, Structure of BODIPY fluorescent dye-labeled erucamide (BDPErucamide).  
+d, BDPErucamide (214 ng) was taken up by CD11b+ cells after injection. 
+Representative of three independent experiments with similar results for a, 
+b and d. e, Retinal flat-mount staining of retinas injected with vehicle and Eru. 
+Vasculature is immunolabeled in red with collagen IV, and CD11b+ myeloid cells 
+were labeled in green. f, CD11b+ myeloid cell quantification in different layers. 
+Two-sided multiple unpaired t-test, n = 8 for vehicle, n = 5 for Eru, Eru versus 
+vehicle, SP: P = 0.0020, IP: P = 0.0079, DP: P = 0.0288. g,h, Angiogenic and 
+neurotrophic factors are upregulated in CD11b+ cells (g) sorted by fluorescence-
+activated cell sorting (FACS) from injected retinas (214 ng erucamide, multiple 
+unpaired t-test, n = 4, P = 0.0002 for CTGF, P < 0.0001, t = 9.188, d.f. = 52 for 
+PDGFβ, P = 0.0001 for CX3CL1, P = 0.0001 for Ang1, P = 0.0303 for BDNF) and iPS 
+cell MPCs (h) (0.64 µM erucamide, multiple unpaired t-test, n = 3, P = 0.000004 
+for PDGFα, P = 0.013822 for CTGF, P = 0.002152 for PDGFβ, P = 0.003341 for 
+Ang1, P = 0.015631 for VEGF, P = 0.016873 for PIGF, P = 0.007992 for BDNF) by 
+erucamide treatment. For f–h, box plots show the median (center line), 25–75th 
+percentiles (box bounds) and minimum to maximum values (whiskers). All 
+individual data points are shown. Asterisks denote statistical significance:  
+*P < 0.05, **P < 0.01, ***P < 0.001, ****P < 0.0001.
+
+
+--- Page 6 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Tile scan
+a
+c
+Non-injected
+GS-lectin
+10 µm 
+C18-pSi
+Eru-C18-pSi
+C18-pSi
+Eru-C18-pSi
+C18-pSi
+C18-pSi
+Eru-C18-pSi
+Eru-C18-pSi
+d
+BDPEru
+FACS-sorted CD11b+ cells from injected retinas
+iPS cell-derived MPCs
+g
+h
+×200 zoom
+b
+10 µm 
+Collagen IV
+GS lectin
+Merged
+CD11b
+GS
+lectin
+Merged
+CD11b
+Collagen IV
+GS lectin
+Merged
+CD11b
+BDPEru- C18-pSi
+Superficial
+Intermediate
+Deep
+ONL
+Collagen IV
+CD11b Merged with DAPI
+e
+f
+PDGFα
+CTGF
+PDGFβ
+CX3CL1
+Ang1
+VEGF
+PIGF
+FGF11
+FGF2
+IGF1
+PEDF
+BDNF
+0
+5
+10
+15
+Relative expression to actin
+0
+2
+4
+6
+****
+*
+**
+Relative expression to actin
+Superficial plexus
+Intermediate plexus
+Deep plexus
+0
+100
+200
+300
+400
+500
+CD11b+ cells per mm2 retina
+PDGFα
+CTGF
+PDGFβ
+CX3CL1
+Ang1
+VEGF
+PIGF
+FGF
+IGF1
+PEDF
+BDNF
+**
+*
+*
+**
+**
+**
+*
+10 µm 
+C18-pSi
+Eru-C18-pSi
+C18-pSi
+Eru-C18-pSi
+****
+**** ****
+***
+*
+10 µm 
+CONH2
+N N
+N
+HN
+O
+N B
+N
+OMe
+BODIPY fluorescent dye-labeled erucamide
+BDPErucamide
+
+
+--- Page 7 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Erucamideprobe (UV–)
+Erucamideprobe (UV+)
+Oleamide probe (UV+)
+Palmitamideprobe (UV+)
+X2 (duplex)
+EtOH (UV+)
+TMT
+10-126
+TMT
+10-127N
+TMT
+10-127C
+TMT
+10-128N
+TMT
+10-128C
+TMT
+10-129N
+TMT
+10-129C
+TMT
+10-130C
+TMT
+10-130N
+TMT
+10-131
+1) UV light
+2) HMC3 cell lysis
+3) ‘Click’ with biotin-N3
+4) Enrich
+5) Digest
+6) TMT
+10 labeling
+7) Combine
+m/z
+126
+127
+128
+129
+130
+131
+Reporter ion intensity
+Multiplexed quantification
+3) ‘Click’ with FL-N3
+4) SDS–PAGE
+* = Probe-specific labeling
+b
+c
+Flag
+TMEM19
+Mock Flag–mTMEM19
+d
+a
+UV
+–
+–
++
++
++
++
++
++
+Eru.da
+Eru.da
+Ole.da
+Pal.da
+Eru.da
+Eru.da
+Ole.da
+Pal.da
+Protein
+Enrichment
+High
+Low
+VMP1
+TMEM19
+HSD17B12
+TSPAN15
+TSPAN9
+SLC35D1
+DRAM2
+TMBIM6
+SLC35C2
+–4
+–2
+ 0
+ 2
+ 4
+–4
+–2
+0
+2
+4
+log2(Eru/Pal)
+log2(Eru/Ole)
+Probe
+Eru.da
+Non–selective
+CONH2
+N N
+CONH2
+N N
+CONH2
+N N
+Erucamide-diazarine probe
+Oleamide-diazarine probe
+Palmitamide-diazarine probe
+NH2
+O
+N
+N
+NH2
+O
+N
+N
+NH2
+O
+N
+N
+NH2
+O
+N
+N
+*
+*
+*
+*
+*
+Fig. 4 | Identifying the binding protein of erucamide in microglia by PAL.  
+a, ‘Fully functionalized’ lipid probes of erucamide, oleamide and palmitamide  
+possessing photoreactive diazirine and alkyne handles. b, Chemoproteomics 
+experiment workflow of PAL for in situ profiling in HMC3 cells. Cells were 
+treated with vehicle (ethanol or EtOH) or a lipid probe for 3 h. Cells were then UV 
+irradiated and lysed, and lipid probe-labeled proteins were conjugated to biotin 
+azide by CuAAC reaction. The biotin-labeled proteins were then enriched with 
+streptavidin beads and trypsin digested, and the digested peptides were labeled 
+with TMT, followed by combination, high-performance liquid chromatography  
+(HPLC) fractionation and LC–MS/MS analysis. c, A plot highlighting proteins  
+selectively enriched by erucamide diazirine probe (Eru.da) over oleamide-
+diazirine probe (Ole.da) and palmitamide-diazirine probe (Pal.da). x and y axes 
+represent ratios of relative protein enrichment for corresponding probes (x axis:  
+Eru.da/Pal.da, y axis: Eru.da/Ole.da). d, Confirmation of selective engagement  
+of TMEM19 by the Eru.da performed in HEK293T cells transiently expressing  
+TMEM19. Data are representative of three independent experiments with  
+similar results.
+
+
+--- Page 8 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Human TMEM19 
+Model confidence
+Very high (pLDDT > 90)
+High (90 > pLDDT > 70)
+Low (70 > pLDDT > 50)
+Very low (pLDDT < 50)
+Cytokine–cytokine receptor interaction
+Hypertrophic cardiomyopathy
+Dilated cardiomyopathy
+JAK–STAT signaling pathway
+Amphetamine addiction
+Adrenergic signaling in cardiomyocytes
+Alpha-linolenic acid metabolism
+Insulin secretion
+Leishmaniasis
+Viral myocarditis
+Neuroactive ligand receptor interaction
+Tuberculosis
+Cytoskeleton in muscle cells
+Ovarian steroidogenesis
+Viral protein interaction with cytokine and cytokine receptor
+Human papillomavirus infection
+Phagocytosis
+Aldosterone synthesis and secretion
+0
+0.5
+1.0
+1.5
+–0.8
+–0.4
+0
+enrichmentScore
+setSize
+100
+200
+300
+enrichmentScore
+–0.75
+–0.50
+–0.25
+0
+0.25
+0.50
+a
+c
+Mouse TMEM19
+TNFRSF8
+PDGFRB
+TNFSF18
+TNFSF13B
+b
+(siTMEM19-Eru-pSi vs. siTMEM19-pSi)
+Compared to (Scr-Eru-pSiVS. Scr-pSi)
+Cytokine–cytokine receptor interaction
+Scr-C18-pSi
+Scr-Eru-C18-pSi
+SiTMEM19-C18-pSi
+SiTMEM19-Eru-C18-pSi
+–2
+–1
+0
+1
+2
+Normalized gene counts
+d
+rd10
+P0
+P12
+P22
+Eru-C18-pSi 1st inj
+Eru-C18-pSi 2nd inj
+P16
+PR degeneration begins
+e
+P7
+AAV2-shRNA inj
+P32
+Tissue sampling
+1-OD_ERG [RE]
+A
+B
+0
+100
+200
+300
+Time (ms)
+Time (ms)
+Time (ms)
+Time (ms)
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+B
+0
+100
+200
+300
+–160
+–80
+0
+80
+160
+1-OD_ERG [RE]
+A
+(RE)
+B
+0
+100
+200
+300
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+(LE)
+0
+100
+200
+300
+–160
+–80
+0
+80
+160
+Left eye:
+AAV2-Scr + C18-pSi
+Right eye: 
+AAV2-shTMEM19 + C18-pSi
+Left eye:
+AAV2-Scr + Eru-C18-pSi
+Right eye:
+AAV2-shTMEM19 + Eru-C18-pSi
+Scotopic B-wave
+(µV, 50 cd s/m
+2)
+Sup.+Int. plexus
+Deep plexus
+0
+10
+20
+30
+40
+Vascular area (%)
+NS
+NS
+**
+*
+f
+g
+h
+Scotopic A 0.01
+Scotopic B 0.01
+Scotopic A 25
+Scotopic B 25
+Scotopic A 50
+Scotopic B 50
+Photopic A 50
+Photopic B 50
+Average flickers 25
+0
+50
+100
+150
+200
+250
+ERG amplitudes (µV)
+AAV2-shTMEM19 + Eru-C18-pSi
+AAV2-Scr + C18-pSi
+AAV2-Scr + Eru-C18-pSi
+AAV2-shTMEM19 + C18-pSi
+P = 0.14
+*
+P = 0.07
+(cd s/m2)
+TMEM19 
+VEGF
+FGF2
+PDGFA
+IGF1
+BDNF
+TNF
+0
+1
+2
+3
+Relative expression to actin
+Scr-C18-pSi
+Scr-Eru-C18-pSi
+siTMEM19-C18-pSi
+siTMEM19-Eru--C18-pSi
+NS
+NS
+NS
+NS
+NS
+NS
+NS
+NS
+NS
+****
+Scotopic B-wave
+(µV, 50 cd s/m
+2)
+*
+**
+**
+*
+*
+*
+*
+*
+*
+****
+****
+0.4
+–log10(P.adjust)
+B
+(LE)
+(RE)
++↑
++↑
++↑
++↑
+
+
+--- Page 9 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+controls (Fig. 3h). Taken together, these data suggest that CD11b+ mye-
+loid cells are the primary target of erucamide both in vivo and in vitro 
+resulting in the secretion of pro-angiogenic and neurotrophic factors.
+TMEM19 is the binding protein mediating erucamide’s effects
+These results raised the question of whether there is a specific recep-
+tor or binding protein for erucamide at the cellular level. We used a 
+photoaffinity labeling (PAL) method36 to further explore and define 
+the potential binding proteins of erucamide in a human microglia cell 
+line, HMC3 cells. As shown in Fig. 4, we generated ‘fully functionalized’ 
+lipid probes of erucamide (Eru.da) and the closely related PFAMs, which 
+are also naturally present in the retina (oleamide and palmitamide, Ole.
+da and Pal.da), as control probes36. A photoreactive element (diazirine 
+group) was introduced into the carbon chain of erucamide, oleam-
+ide and palmitamide to convert reversible small-molecular-protein 
+interactions into stable, covalent adducts upon ultraviolet (UV) 
+light irradiation. Introduction of a terminal alkyne handle allows 
+late-stage conjugation to rhodamine or biotin tags by click chemistry 
+(Fig. 4a,b). Erucamide, oleamide and palmitamide probes showed 
+overlapping but distinct protein interaction profiles in HMC3 cells 
+(Extended Data Fig. 4a). Following PAL (3 h incubation with probes), 
+biotin conjugation and affinity enrichment, multiplexed proteomics 
+of all three probes provided a unique list of erucamide-specific bind-
+ing proteins that are involved in specific biological processes like lipid 
+metabolism, signaling and cellular processes. However, a large number 
+of these proteins were uncategorized as membrane traffic-related 
+proteins (Extended Data Fig. 4b,c). From the list of proteins identified, 
+a transmembrane protein, TMEM19, was the most likely candidate to be 
+an erucamide binding protein (Fig. 4c) because it was the most highly 
+enriched protein in PAL of erucamide diazirine probes compared to 
+control probes. We confirmed the interaction between erucamide and 
+TMEM19 by overexpressing TMEM19 in HEK293T cells and observed 
+that overexpressed TMEM19 is prominently labeled by erucamide 
+probes compared to control probes (Fig. 4d). These data indicate that 
+TMEM19 is a receptor for erucamide and may mediate erucamide’s 
+effect on cell function.
+TMEM19-dependent downstream signaling mediates 
+neuroprotection
+TMEM19 is predicted to have six transmembrane domains; however, 
+its function remains unknown (Fig. 5a). We further investigated the 
+effect of erucamide on myeloid cells through TMEM19 by analyzing 
+bulk RNA sequencing (RNA-seq) in iPS cell-MPCs treated with eru-
+camide with TMEM19 knocked down. TMEM19 was knocked down 
+in iPS cell-MPCs using siTMEM19 or scrambled short interfering RNA 
+(Scr siRNA) as control, then cells were treated with either empty 
+nanoparticles (C18-pSi) or erucamide (Eru-C18-pSi). Differential 
+expression analysis was performed to compare the treatment combi-
+nations. We first performed the comparisons between Scr cells with 
+and without erucamide (Extended Data Fig. 5a) and siTMEM19 cells 
+separately (Extended Data Fig. 5c); subsequently, we compared dif-
+ferences from the two comparisons against each other in Fig. 5b. By 
+directly comparing erucamide-induced transcriptional changes in 
+Scr versus siTMEM19 MPCs, this analysis isolates the component of 
+Fig. 5 | TMEM19 is a target protein of erucamide in MPCs. a, Predicted protein 
+structures of mouse and human TMEM19 showed six transmembrane domains 
+according to the AlphaFold Protein Structure Database51. pLDDT, AlphaFold per-
+residue confidence measure (0–100), corresponding to the model’s predicted 
+local Distance Difference Test computed on Cα atoms (lDDT-Cα) score; higher 
+values indicate greater confidence. b, The Kyoto Encyclopedia of Genes and 
+Genomes (KEGG) pathway enrichment analysis of genes whose regulation by 
+erucamide is lost or attenuated upon TMEM19 knockdown. This is in practice the 
+difference between the effect of erucamide within scrambled cells (Extended 
+Data Fig. 5a) and TMEM19-knockdown cells (Extended Data Fig. 5c) in RNA-seq. 
+‘Cytokine–cytokine receptor pathways’ is the most significantly deregulated 
+one (adjusted P value = 0.0066). JAK–STAT, Janus kinase-signal transducer and 
+activator of transcription. c, Normalized gene counts of cytokine–cytokine 
+receptor interaction by RNA-seq indicate changes of TNFRSF8, TNFSF13B, 
+TNFSF18 and PDGFRB in angiogenesis-related pathways. Representative genes 
+are colored. d, Results of qPCR analysis of direct effective cytokines and growth 
+factors in MPCs used for RNA-seq (n = 4, two-sided multiple unpaired t-test;  
+for each gene, two comparisons are shown: Scr-C18-pSi versus Scr-Eru-C18-pSi  
+and Scr-Eru-C18-pSi versus siTMEM19-Eru-C18-pSi. TMEM19: P = 0.000290, 
+P < 0.0001; VEGF: NS, P = 0.0306; FGF2: P = 0.0377, P = 0.0374; PDGFA: P = 0.0026, 
+P = 0.0478; IGF1: P = 0.0241, P = 0.0022; BDNF: P = 0.0055, P = 0.0290; TNF:  
+NS, P = 0.000845). Data are representative of three independent biological  
+replicates. e, Schematic of AAV2 viruses and Eru-C18-pSi (214 ng) intravitreal  
+injection in rd10 mice. f, Vascular density quantification of retinal vessels of  
+superficial + intermediate, and deep plexus (SP + IP, and DP). Two-sided multiple  
+unpaired t-test, n = 6 for AAV2-Scr+vehicle, n = 7 for AAV2-Scr+Eru, n = 6 for AAV2- 
+shTMEM19+vehicle, n = 7 for AAv2-shTMEM19+Eru, DP: P = 0.03 for Scr-C18-pSi 
+versus Scr-Eru-C18-pSi, P = 0.01 for Scr-C18-pSi versus AAV2-shTMEM19-Eru-C18- 
+pSi. g, ERG measurements of all scotopic waves and photopic responses to a flash 
+in dark-adapted rd10 mice injected with AAV2-Scr or AAV2-shTMEM19 viruses,  
+then with Eru or vehicle at P12 and P22 (two-sided multiple unpaired t-test,  
+n = 6 per group, P = 0.042624 Scr-Eru-C18-pSi versus shTMEM19-Eru-C18-pSi).  
+h, Representative traces of scotopic B-wave at 50 cd s/m2 intensity by ERG in mice  
+treated with vehicle (left) and erucamide (right), for the same mouse. The right  
+eye was injected with AAV-shTMEM19 viruses, while the left eye was injected  
+with AAV2-Scr viruses. For d, f and g, box plots show the median (center line), 
+25–75th percentile (box bounds) and minimum to maximum values (whiskers). 
+All individual data points are shown. Asterisks denote statistical significance:  
+*P < 0.05, **P < 0.01, ***P < 0.001, ****P < 0.0001.
+Fig. 6 | Neutralizing antibodies inhibit erucamide’s ability to rescue retinal 
+atrophy in rd10 mice. a, Schematic of Eru-C18-pSiNPs (214 ng) together with 
+neutralizing antibody or IgG control injection in rd10 mice. b, Retinas from P32 
+rd10 mice. Photoreceptors were immunolabeled green (recoverin). c, Retinal 
+layer thicknesses quantified in b (two-way ANOVA with Fisher’s LSD post hoc 
+test, n = 7 for C18-pSi+IgG, n = 6 for Eru+IgG, n = 7 for C18-pSi+Abs, n = 8 for 
+Eru+Abs), ONL: C18-pSi+IgG versus Eru-C18-pSi+IgG t = 5.283, d.f. = 48. P < 0.0001, 
+C18-pSi+Abs versus Eru-C18-pSi+Abs NS. INL: C18-pSi+IgG versus Eru-C18-pSi+IgG 
+t = 5.558, d.f. = 48, P < 0.0001, C18-pSi+Abs versus Eru-C18-pSi+Abs NS. d, Retinal 
+vessel density quantification in different layers in these mice (two-sided multiple 
+unpaired t-test, n = 8 for C18-pSi+IgG, n = 10 for Eru+IgG, n = 5 for C18-pSi+Abs, 
+n = 7 for Eru+Abs, DP: P = 0.027577 for C18-pSi+IgG versus Eru-C18-pSi+IgG, all 
+other comparisons NS). e, Retinal flat-mount staining of retinas injected with 
+C18-pSi+IgG, Eru-C18-pSi+IgG, C18-pSi+Abs and Eru-C18-pSi+Abs. Vasculature is 
+immunolabeled in red with collagen IV, and CD11b+ myeloid cells were labeled 
+in green. f, CD11b+ myeloid cell quantification in different layers of e (two-sided 
+multiple unpaired t-test, n = 5 for C18-pSi+IgG, n = 6 for Eru+IgG, n = 6 for C18-
+pSi+Abs, n = 9 for Eru+Abs, C18-pSi+IgG versus Eru-C18-pSi+IgG: SP P = 0.0503, 
+IP P = 0.000071, DP P = 0.0013, ONL P = 0.000063. C18-pSi+Abs versus Eru-C18-
+pSi+Abs: DP P = 0.0108, all other comparisons NS). g, ERG measurements of all 
+scotopic waves and photopic responses to a flash in dark-adapted rd10 mice 
+bilaterally injected with C18-pSi+IgG, Eru-C18-pSi+IgG, C18-pSi+Abs and Eru-C18-
+pSi+Abs at P32 (two-sided multiple unpaired t-test, n = 8 for C18-pSi+IgG, n = 7 
+for Eru+IgG, n = 8 for C18-pSi+Abs, n = 5 for Eru+Abs, Eru+IgG versus Eru+Abs: 
+P = 0.049704 for Scotopic B 25, P = 0.028174 for Scotopic B 50, C18-pSi+IgG versus 
+Eru-C18-pSi+IgG: P = 0.000411 for Scotopic B 50). h, Representative traces of 
+scotopic B-wave at 50 cd s/m2 intensity by ERG in mouse eyes bilaterally treated 
+with C18-pSi+IgG, Eru-C18-pSi+IgG, C18-pSi+Abs and Eru-C18-pSi+Abs. For c, d, f and 
+g, box plots show the median (center line), 25–75th percentiles (box bounds) and 
+minimum to maximum values (whiskers). All individual data points are shown. 
+Asterisks denote statistical significance: *P < 0.05, **P < 0.01, ***P < 0.001,  
+****P < 0.0001.
+
+
+--- Page 10 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+d
+b
+c
+g
+DAPI Recoverin
+*
+ONL
+INL
+a
+rd10
+P0
+P12
+P22
+P32
+1st inj 
+Neutralizing antibodies/IgG
+Tissue sampling
+P16
+PR degeneration begins
+2nd inj 
+Eru-C18-pSi
+Eru-C18-pSi
+Neutralizing antibodies/IgG
+Sup. + Int. plexus
+Deep plexus
+0
+10
+20
+30
+Vascular area (%)
+NS
+NS
+NS
+ONL
+INL
+*
+0
+10
+20
+30
+40
+50
+Avg. thickness (µm)
+NS
+NS
+****
+C18-pSi
++Abs
+Eru-C18-pSi
++Abs
+C18-pSi
++IgG
+Eru-C18-pSi
++IgG
+C18-pSi
++Abs
+Eru-C18-pSi
++Abs
+C18-pSi
++IgG
+Eru-C18-pSi
++IgG
+C18-pSi
++Abs
+Eru-C18-pSi
++Abs
+C18-pSi
++IgG
+Eru-C18-pSi
++IgG
+Collagen IV CD11b DAPI
+Superficial
+Intermediate
+Deep
+ONL
+e
+h
+f
+Superficial
+plexus
+Intermediate
+plexus
+Deep plexus
+ONL
+0
+200
+400
+600
+800
+1,000
+CD11b
++ cells per mm2 retina
+NS
+****
+NS
+NS
+Scotopic B-wave (µV, 50 cd s/m
+2)
+Scotopic A 0.01
+Scotopic B 0.01
+Scotopic A 25
+Scotopic B 25
+Scotopic A 50
+Scotopic B 50
+Photopic A 50
+Photopic B 50
+Average flickers 25
+0
+50
+100
+150
+200
+250
+ERG amplitudes (µV)
+C18-pSi + IgG
+Eru-C18-pSi + Abs
+C18-pSi + Abs
+Eru-C18-pSi + IgG
+C18-pSi + IgG
+Eru-C18-pSi + Abs
+C18-pSi+Abs
+Eru-C18-pSi + IgG
+P = 0.11
+(cd s/m
+2)
+100 µm
+10 µm
+****
+**
+*
+*
+*
+***
+C18-pSi + IgG
+Eru-C18-pSi + Abs
+C18-pSi + Abs
+Eru-C18-pSi + IgG
+****
+C18-pSi + IgG
+Eru-C18-pSi + Abs
+C18-pSi + Abs
+Eru-C18-pSi + IgG
+1-OD_ERG [RE]
+0
+100
+200
+300
+ms
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+B
+0
+100
+200
+300
+ms
+–160
+–80
+0
+80
+160
+1-OD_ERG [RE]
+0
+100
+200
+300
+ms
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+B
+0
+100
+200
+300
+ms
+–160
+–80
+0
+80
+160
+1-OD_ERG [RE]
+A
+A
+B
+0
+100
+200
+300
+ms
+–160
+–80
+0
+80
+160
+1-OD_ERG [LE]
+A
+0
+100
+200
+300
+ms
+–160
+–80
+0
+80
+16
+ms
+–160
+B
+(RE)
+–80
+0
+80
+160
+1-OD_ERG [RE]
+ms
+–160
+–80
+0
+80
+160
+2-OD_ERG [RE]
+0
+100
+200
+300
+0
+100
+200
+300
+(LE)
+A
+B
+B
+(RE)
+(RE)
+A
+B
+(LE)
+(LE)
+(RE)
+A
+B
+(LE)
++↑
++↑
++↑
++↑
++↑
++↑
++↑
++↑
++↑
+
+
+--- Page 11 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+the erucamide response that specifically requires TMEM19. Enrich-
+ment analyses on these results revealed that the most significantly 
+decreased pathway involves cytokine–cytokine receptor interactions 
+(Fig. 5b and Extended Data Fig. 5a–c). In fact, 42 genes in this pathway 
+were activated by erucamide stimulation in scrambled cells but dys-
+regulated in siTMEM19 cells. A number of them (for example, PDGFRB, 
+TNFSF18, TNFSF13B and TNFRSF8) are reported to be highly associ-
+ated with angiogenesis and vascular homeostasis37–39 (Fig. 5c). qPCR 
+confirmed that the effective downstream cytokines/growth factors 
+(VEGFa, PDGFα, FGF, TNF, IGF-1 and BDNF) of these pathways are upreg-
+ulated by erucamide, but they were dysregulated when we knocked 
+down TMEM19 (Fig. 5d). This aligns well with our results indicating 
+an upregulation of pro-angiogenic genes in erucamide-injected reti-
+nas. To determine if TMEM19 is essential for the activation of MPCs by 
+erucamide stimulation, we knocked down another two top candidates 
+from the same PAL list. It was only when TMEM19 was knocked down 
+that we observed that most of the growth factors (for example, FGF-2, 
+VEGFa and PDGFα) triggered by erucamide were not upregulated or 
+activated (Extended Data Fig. 5d,e). Interestingly, the general activa-
+tion of MPCs by TGFβ1, lipopolysaccharides or dimethyloxalylglycine 
+was not affected by knocking down TMEM19 (Extended Data Fig. 5f). 
+These results suggest that TMEM19 is an authentic binding protein 
+for erucamide and is essential for pro-angiogenic and neurotrophic 
+signaling pathways mediated by erucamide in MPCs. To further validate 
+the role of the erucamide–TMEM19 axis at the in vivo level, we gener-
+ated an adeno-associated virus encoding an shRNA (AAV2-shRNA) 
+to knock down TMEM19 in rd10 mice. As shown by Fig. 5e, for each 
+mouse, we injected AAV2-Scrambled (AAV2-Scr) viruses into the left 
+eye, and AAV2-shTMEM19 viruses into the right eye at P7. Five days 
+later, either vehicle or Eru was injected into both eyes. At P32, both the 
+activation of CD11b+ cells in different layers (Extended Data Fig. 5g,h) 
+and the rescuing effect of erucamide in deep plexus vasculature 
+(Fig. 5f and Extended Data Fig. 5h) were gone in the eyes injected with 
+AAV2-shTMEM19, In addition, erucamide-induced preservation of 
+ONL and INL thicknesses was also lost in TMEM19-knockdown eyes 
+(Extended Data Fig. 5i). Also, an ERG functional study indicated that 
+scotopic B-wave rescuing was blocked in TMEM19-knockdown eyes 
+(Fig. 5g,h).
+We continued to interfere with the pathway mediated by eru-
+camide–TMEM19 in rd10 mice by using neutralizing antibodies for the 
+downstream angiogenic and neurotrophic factors of VEGFA, FGF-2 and 
+TNF, which were found to be regulated by erucamide both in the MPCs 
+and in vivo CD11b+ cells, to test if these factors are the downstream 
+agents of erucamide rescue in degenerating retinas. The cocktail of 
+neutralizing antibodies or IgG controls was intravitreally injected 
+together with Eru-C18-pSi as illustrated in Fig. 6a. The rescued pheno-
+type induced by erucamide in rd10 mice was largely blocked by these 
+neutralizing antibodies in retinal thickness (Fig. 6b,c), deep plexus 
+vessel density and CD11b+ cell recruitment (Fig. 6d–f). Neutralizing 
+antibodies also prevented functional rescue in ERG by erucamide 
+(Fig. 6g,h), indicating the rescue effects of erucamide in rd10 mice are 
+mediated by erucamide–TMEM19 through the downstream angiogenic 
+and neurotrophic factors of VEGFa, FGF-2 and TNF.
+We found that erucamide is highly abundant in normal retinas and 
+is severely dysregulated during retinal degeneration. Erucamide was 
+found to be a potent pro-angiogenic, paracrine signaling molecule 
+that regulates the retinal angiogenic environment and functions as a 
+neurotrophic factor largely by targeting and activating MPCs through 
+TMEM19. Knockdown of TMEM19 by siRNA results in failure to respond 
+to the erucamide-stimulated paracrine effect of growth factors, which 
+is consistent with in vivo knockdown of TMEM19 and inhibition of 
+erucamide–TMEM19 downstream pathways by neutralizing antibod-
+ies (Fig. 7). These observations provide insight into the action of the 
+angiogenic factor erucamide as a cross-tissue signaling molecule. It 
+may function similarly in multiple organ systems where it plays a critical 
+role in regulating neurovasculoglial cross-talk.
+Discussion
+In recent years, growing evidence has highlighted that neurovascu-
+lar and glial cross-talk is essential for maintaining healthy, functional 
+neurons, blood vessels and glia in the CNS40, including the retina. Ther-
+apeutic strategies aimed at preventing neuronal degeneration and 
+vision loss have focused on modulating neurotrophic and angiogenic 
+signaling pathways as well as using iPS cell-derived retinal tissues to 
+replace damaged RPE cells/photoreceptors, stabilizing retinal struc-
+ture and visual function41–44. Several studies have shown that stem cell 
+transplantation into the eyes of retinitis pigmentosa animal models 
+can partially improve visual function45,46. However, concerns remain 
+regarding the long-term efficacy of iPS cell-derived RPE therapies, 
+particularly due to the risk of oncogenic mutations and tumorigen-
+esis reported in both preclinical models and clinical observations47,48. 
+For example, a pilot clinical study that administered mesenchymal 
+GCL
+INL
+ONL
+Deep plexus
+Intermediate plexus
+Superficial plexus
+RPE
+IS/OS
+a    Healthy retina
+b    RP retina
+c    RP retina + erucamide
+Rods
+Cones
+Müller glia
+Microglia
+Horizontal cells
+Bipolar cells
+Amacrine
+Retinal ganglion cells
+d    RP retina + Eru + neutralizing
+ Abs/AAV2-shTMEM19
+Erucamide level 
+Normal
+Low
+Rescued
+Blocked
+Fig. 7 | Proposed function of erucamide in the retina. a, In healthy retinas,  
+a certain level of erucamide is essential to nourish the neural layers and retinal 
+vessels by maintaining the secretion of neurotrophic and angiogenic factors 
+from microglia. IS/OS, photoreceptor inner segment/outer segment junction; 
+GCL, ganglion cell layer. b, In retinas with retinitis pigmentosa (RP), erucamide 
+is diminished, photoreceptors are degenerated, and retinal vessels are atrophic 
+in the deep plexus. c, In retinitis pigmentosa retinas rescued with erucamide 
+injections, erucamide regulated the secretion of neurotrophic and angiogenic 
+factors from microglia. These microglia were activated through all layers, 
+especially in the ONL at P32, leading to an increase in retinal vessel density in  
+the deep plexus and a slight increase in the thickness of both ONL and INL.  
+d, In retinitis pigmentosa retinas injected simultaneously with erucamide and 
+AAV-TMEM19 or downstream neutralizing antibodies, these rescue effects are 
+blocked, leading to continued photoreceptor degeneration and deep plexus 
+atrophy, similarly to untreated retinitis pigmentosa retinas in b. Figure created in 
+BioRender; Wei, G. https://biorender.com/8d5lglz (2026).
+
+
+--- Page 12 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+stem cells, adipose-derived stem cells and platelet-rich plasma into the 
+suprachoroidal space of 21 patients with retinitis pigmentosa did not 
+show significant improvements in visual performance up to 6 months 
+after treatment49.
+The limited survival rates and potential immune responses pose 
+important hurdles to the widespread clinical application of stem cell 
+therapies in treating retinal degenerative diseases like AMD and reti-
+nitis pigmentosa. Given these limitations, we explored whether small 
+molecules expressed by iPS cell-derived retinal tissue could provide 
+neurovasculotrophic rescue in models of retinal degeneration. Metabo-
+lomic and lipidomic screens of degenerating retinas revealed a PFAM, 
+erucamide, with paracrine neurotrophic activity that exerted a pro-
+found rescue effect on models of retinal neurovascular degeneration. 
+Our approach involved the use of advanced nanoparticles to allow 
+effective in vivo delivery of erucamide, circumventing its hydrophobic 
+nature and enhancing its bioavailability in the retina.
+Furthermore, we identified CD11b+ myeloid cells as primary targets 
+of erucamide within the retina. Consistent with prior studies implicat-
+ing myeloid cells in photoreceptor support, erucamide treatment pro-
+moted CD11b+ cell activation across retinal layers, with significant ONL 
+accumulation observed specifically in erucamide-treated degenerating 
+rd10 retinas. This context-dependent ONL accumulation of CD11b+ cells 
+is consistent with support of neurotrophic signaling to degenerating 
+photoreceptors and paracrine angiogenic support of the adjacent deep 
+vascular plexus. Further mechanistic studies using PAL, click chemistry 
+for biotin-derived affinity enrichment and multiplexed quantitative 
+proteomics alongside closely related PFAMs, revealed TMEM19 as a 
+new transmembrane protein serving as a major and selective bind-
+ing partner for erucamide. Our findings define erucamide–TMEM19 
+signaling as a regulator of retinal homeostasis through the coordinated 
+modulation of neuronal, glial and vascular compartments. Rather than 
+acting solely as a neuroprotective or anti-inflammatory molecule, 
+erucamide orchestrates a broader ‘cross-talk’ between neural, vascular 
+and glial elements of the retina. Activation of TMEM19 on microglial 
+cells stimulates the secretion of cytokines and growth factors (includ-
+ing VEGF, PDGF, FGF-2, IGF-1 and BDNF) that support photoreceptor 
+integrity and maintain vascular networks.
+Although erucamide-treated rd10 mice showed significant B-wave 
+recovery under scotopic conditions, A-wave amplitudes exhibited only 
+modest, nonsignificant increases, consistent with partial preservation 
+of photoreceptors that remain genetically compromised due to the 
+Pde6b mutation. This incomplete A-wave recovery suggests that the 
+enhanced B-wave likely reflects not only residual photoreceptor input 
+but also neurotrophic modulation of inner retinal cells. Supporting 
+this, erucamide treatment elevated CD11b+ myeloid infiltration and 
+upregulated trophic factors such as FGF, IGF-1 and BDNF, which may 
+enhance synaptic function or resilience of bipolar and Müller cells. 
+These findings point to a dual mechanism of action: preservation of 
+rod photoreceptors and functional support to inner retinal circuits, 
+underlying the observed rescue of visual signaling.
+TMEM19 is a new transmembrane protein with no reported 
+function in any other cell type or tissues. Using single-cell RNA-seq 
+databases from the Spectacle Platform, we found that TMEM19 has low 
+expression in retinas across different databases for humans and mice, 
+with signals mainly from the microglia50, which is consistent with our 
+observations. Future investigations will more closely examine the pre-
+cise mechanisms regulated by TMEM19 and explore additional applica-
+tions of erucamide in both in vitro and in vivo models. Furthermore, the 
+optimization of erucamide analogs to enhance solubility and prolong 
+in vivo half-life could potentially offer novel small-molecule-based 
+therapies for AMD, retinitis pigmentosa and other neurovasculoglial 
+degenerative diseases. Conversely, the development of erucamide 
+antagonists or TMEM19 inhibitors could provide strategies to mitigate 
+pathological angiogenesis associated with conditions like diabetic 
+retinopathy and neovascular AMD.
+In conclusion, our findings support the use of small-molecule- 
+based therapies targeting the erucamide–TMEM19 pathway as a prom-
+ising therapy for the treatment of retinal degenerative diseases, offer-
+ing potential advantages in terms of efficacy and clinical applicability. 
+This discovery expands our understanding of PFAMs beyond their 
+established roles in the CNS, shedding light on their potential thera-
+peutic applications in retinal degenerative diseases. By elucidating 
+the molecular underpinnings of erucamide’s neurotrophic effects, 
+this study may advance therapeutic strategies that preserve vision 
+and improve quality of life for patients affected by these devastating 
+conditions worldwide.
+Online content
+Any methods, additional references, Nature Portfolio reporting sum-
+maries, source data, extended data, supplementary information, 
+acknowledgements, peer review information; details of author contri-
+butions and competing interests; and statements of data and code avail-
+ability are available at https://doi.org/10.1038/s41593-026-02341-w.
+References
+1.	
+Law, C. W. et al. RNA-seq analysis is easy as 1-2-3 with limma, 
+Glimma and edgeR. F1000Res 5, ISCB Comm J-1408 (2016).
+2.	
+Blackshaw, S. et al. Genomic analysis of mouse retinal 
+development. PLoS Biol. 2, E247 (2004).
+3.	
+Verbakel, S. K. et al. Non-syndromic retinitis pigmentosa. Prog. 
+Retin. Eye Res. 66, 157–186 (2018).
+4.	
+Milam, A. H., Li, Z. Y. & Fariss, R. N. Histopathology of the human 
+retina in retinitis pigmentosa. Prog. Retin. Eye Res. 17, 175–205 
+(1998).
+5.	
+O’Neal, T. B. & Luther, E. E. Retinitis Pigmentosa (StatPearls, 2024).
+6.	
+Strauss, O. The retinal pigment epithelium in visual function. 
+Physiol. Rev. 85, 845–881 (2005).
+7.	
+Lewandowski, D. et al. Dynamic lipid turnover in photoreceptors 
+and retinal pigment epithelium throughout life. Prog. Retin. Eye 
+Res. 89, 101037 (2022).
+8.	
+Gantner, M. L. et al. Serine and lipid metabolism in macular 
+disease and peripheral neuropathy. N. Engl. J. Med. 381,  
+1422–1433 (2019).
+9.	
+Schwitzer, T., Schwan, R., Angioi-Duprez, K., Giersch, A. & 
+Laprevote, V. The endocannabinoid system in the retina: from 
+physiology to practical and therapeutic applications. Neural Plast. 
+2016, 2916732 (2016).
+10.	 Cravatt, B. F. et al. Chemical characterization of a family  
+of brain lipids that induce sleep. Science 268, 1506–1509  
+(1995).
+11.	
+Ezzili, C., Otrubova, K. & Boger, D. L. Fatty acid amide signaling 
+molecules. Bioorg. Med. Chem. Lett. 20, 5959–5968 (2010).
+12.	 Arafat, E. S., Trimble, J. W., Andersen, R. N., Dass, C. &  
+Desiderio, D. M. Identification of fatty acid amides in human 
+plasma. Life Sci. 45, 1679–1687 (1989).
+13.	 Waluk, D. P. et al. in Omega-3 Fatty Acids in Brain and Neurological 
+Health (eds Watson, R. R. & De Meester, F.) 87–107 (Academic 
+Press, 2014).
+14.	 Wakamatsu, K., Masaki, T., Itoh, F., Kondo, K. & Sudo, K. Isolation 
+of fatty acid amide as an angiogenic principle from bovine 
+mesentery. Biochem. Biophys. Res. Commun. 168, 423–429 
+(1990).
+15.	 Mitchell, C. A. et al. Enhancement of neovascularization in 
+regenerating skeletal muscle by the sustained release of 
+erucamide from a polymer matrix. J. Biomater. Appl. 10, 230–249 
+(1996).
+16.	 Smith, C. A., Want, E. J., O’Maille, G., Abagyan, R. & Siuzdak, G.  
+XCMS: processing mass spectrometry data for metabolite 
+profiling using nonlinear peak alignment, matching, and 
+identification. Anal. Chem. 78, 779–787 (2006).
+
+
+--- Page 13 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+17.	 Xue, J., Guijas, C., Benton, H. P., Warth, B. & Siuzdak, G. METLIN 
+MS2 molecular standards database: a broad chemical and 
+biological resource. Nat. Methods 17, 953–954 (2020).
+18.	 Guijas, C. et al. METLIN: a technology platform for identifying 
+knowns and unknowns. Anal. Chem. 90, 3156–3164 (2018).
+19.	 Hamberger, A. & Stenhagen, G. Erucamide as a modulator of 
+water balance: new function of a fatty acid amide. Neurochem. 
+Res. 28, 177–185 (2003).
+20.	 Sailor, M. J. & ProQuest Porous Silicon in Practice: Preparation, 
+Characterization and Applications (Wiley-VCH, 2012).
+21.	 Kim, B. et al. Immunogene therapy with fusogenic nanoparticles 
+modulates macrophage response to Staphylococcus aureus. Nat. 
+Commun. 9, 1969 (2018).
+22.	 Nan, K. et al. Porous silicon oxide-PLGA composite microspheres 
+for sustained ocular delivery of daunorubicin. Acta Biomater. 10, 
+3505–3512 (2014).
+23.	 Chhablani, J. et al. Oxidized porous silicon particles covalently 
+grafted with daunorubicin as a sustained intraocular drug delivery 
+system. Invest. Ophthalmol. Vis. Sci. 54, 1268–1279 (2013).
+24.	 Kim, D. et al. Thermally induced silane dehydrocoupling on silicon 
+nanostructures. Angew. Chem. Int. Ed. 128, 6533–6537 (2016).
+25.	 Herynkova, K., Slechta, M., Simakova, P., Fucikova, A. & Cibulka, O. 
+Agglomeration of luminescent porous silicon nanoparticles in 
+colloidal solutions. Nanoscale Res. Lett. 11, 367 (2016).
+26.	 Bhattacharjee, S. DLS and zeta potential - what they are and what 
+they are not?. J. Control. Release 235, 337–351 (2016).
+27.	 Dulal, N. et al. Slip-additive migration, surface morphology, and 
+performance on injection moulded high-density polyethylene 
+closures. J. Colloid Interface Sci. 505, 537–545 (2017).
+28.	 Hernández-Fernández, J., Puello-Polo, E. & López-Martínez, J. 
+Recovery of (Z)-13-docosenamide from industrial wastewater 
+and its application in the production of virgin polypropylene 
+to improve the coefficient of friction in film type applications. 
+Sustainability 15, 1247 (2023).
+29.	 Chang, B. et al. Two mouse retinal degenerations caused 
+by missense mutations in the beta-subunit of rod cGMP 
+phosphodiesterase gene. Vision Res. 47, 624–633 (2007).
+30.	 Agbaga, M. P. et al. Differential composition of DHA and 
+very-long-chain PUFAs in rod and cone photoreceptors. J. Lipid 
+Res. 59, 1586–1596 (2018).
+31.	 Arroba, A. I., Alvarez-Lindo, N., van Rooijen, N. & de la Rosa, E. J.  
+Microglia-mediated IGF-I neuroprotection in the rd10 mouse 
+model of retinitis pigmentosa. Invest. Ophthalmol. Vis. Sci. 52, 
+9124–9130 (2011).
+32.	 Sakami, S. et al. Probing mechanisms of photoreceptor 
+degeneration in a new mouse model of the common form of 
+autosomal dominant retinitis pigmentosa due to P23H opsin 
+mutations. J. Biol. Chem. 286, 10551–10567 (2011).
+33.	 Friedlander, M. et al. Involvement of integrins alpha v beta 3 and 
+alpha v beta 5 in ocular neovascular diseases. Proc. Natl Acad. Sci. 
+USA 93, 9764–9769 (1996).
+34.	 Usui-Ouchi, A. et al. Deletion of TGFbeta signal in activated 
+microglia prolongs hypoxia-induced retinal neovascularization 
+enhancing Igf1 expression and retinal leukostasis. Glia 70, 
+1762–1776 (2022).
+35.	 Usui-Ouchi, A. et al. Integrating human iPSC-derived macrophage 
+progenitors into retinal organoids to generate a mature retinal 
+microglial niche. Glia 71, 2372–2382 (2023).
+36.	 Niphakis, M. J. et al. A global map of lipid-binding proteins and 
+their ligandability in cells. Cell 161, 1668–1680 (2015).
+37.	 Yin, L. et al. HOOK1 inhibits the progression of renal cell 
+carcinoma via TGF-beta and TNFSF13B/VEGF-A axis. Adv. Sci. 10, 
+e2206955 (2023).
+38.	 Aggarwal, B. B., Gupta, S. C. & Kim, J. H. Historical perspectives on 
+tumor necrosis factor and its superfamily: 25 years later, a golden 
+journey. Blood 119, 651–665 (2012).
+39.	 Andrae, J., Gallini, R. & Betsholtz, C. Role of platelet-derived 
+growth factors in physiology and medicine. Genes Dev. 22, 
+1276–1312 (2008).
+40.	 Alkayed, N. J. & Cipolla, M. J. The ever-evolving concept of the 
+neurovascular unit. Stroke 54, 2178–2180 (2023).
+41.	 D’Antonio-Chronowska, A., D’Antonio, M. & Frazer, K. A. In vitro 
+differentiation of human iPSC-derived retinal pigment epithelium 
+cells (iPSC-RPE). Bio. Protoc. 9, e3469 (2019).
+42.	 Hazim, R. A. et al. Differentiation of RPE cells from integration-free 
+iPS cells and their cell biological characterization. Stem Cell Res. 
+Ther. 8, 217 (2017).
+43.	 Krohne, T. U. et al. Generation of retinal pigment epithelial cells 
+from small molecules and OCT4 reprogrammed human induced 
+pluripotent stem cells. Stem Cells Transl. Med. 1, 96–109  
+(2012).
+44.	 Westenskow, P. D., Kurihara, T. & Friedlander, M. Utilizing 
+stem cell-derived RPE cells as a therapeutic intervention for 
+age-related macular degeneration. Adv. Exp. Med. Biol. 801, 
+323–329 (2014).
+45.	 He, Y. et al. Recent advances of stem cell therapy for retinitis 
+pigmentosa. Int. J. Mol. Sci. 15, 14456–14474 (2014).
+46.	 Surendran, H. et al. Transplantation of retinal pigment epithelium 
+and photoreceptors generated concomitantly via small 
+molecule-mediated differentiation rescues visual function in 
+rodent models of retinal degeneration. Stem Cell Res. Ther. 12,  
+70 (2021).
+47.	 Aoi, T. et al. Generation of pluripotent stem cells from adult 
+mouse liver and stomach cells. Science 321, 699–702 (2008).
+48.	 Okita, K., Ichisaka, T. & Yamanaka, S. Generation of 
+germline-competent induced pluripotent stem cells. Nature 448, 
+313–317 (2007).
+49.	 Limoli, P. G., Vingolo, E. M., Limoli, C. & Nebbioso, M. Stem cell 
+surgery and growth factors in retinitis pigmentosa patients: pilot 
+study after literature review. Biomedicines 7, 94 (2019).
+50.	 Voigt, A. P. et al. Spectacle: an interactive resource for ocular 
+single-cell RNA sequencing data analysis. Exp. Eye Res. 200, 
+108204 (2020).
+51.	 Jumper, J. et al. Highly accurate protein structure prediction with 
+AlphaFold. Nature 596, 583–589 (2021).
+Publisher’s note Springer Nature remains neutral with regard to 
+jurisdictional claims in published maps and institutional affiliations.
+Open Access This article is licensed under a Creative Commons 
+Attribution-NonCommercial-NoDerivatives 4.0 International License, 
+which permits any non-commercial use, sharing, distribution and 
+reproduction in any medium or format, as long as you give appropriate 
+credit to the original author(s) and the source, provide a link to the 
+Creative Commons licence, and indicate if you modified the licensed 
+material. You do not have permission under this licence to share 
+adapted material derived from this article or parts of it. The images 
+or other third party material in this article are included in the article’s 
+Creative Commons licence, unless indicated otherwise in a credit 
+line to the material. If material is not included in the article’s Creative 
+Commons licence and your intended use is not permitted by statutory 
+regulation or exceeds the permitted use, you will need to obtain 
+permission directly from the copyright holder. To view a copy of this 
+licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+© The Author(s) 2026
+
+
+--- Page 14 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Methods
+Animal studies
+Animals were used in strict accordance with ethical guidelines of 
+the Scripps Research Institute (Scripps Research IACUC protocol 
+no. 08-0045). RCS rats were obtained from M. LaVail, UCSF. rd10 
+mice (B6. CXB1-Pde6brd10/J), WT mice (C57BL/6J) and RhoP23H mice 
+(B6.129S6(Cg)-Rhotm1.1Kpal/J) were obtained from the Jackson Labs. All 
+animals were housed under a 12-h light–12-h dark cycle at an ambi-
+ent temperature of 22 ± 2 °C and 45–65% relative humidity, with ad 
+libitum access to standard rodent chow and water. All intravitreal 
+injections were performed under anesthesia to ensure animal welfare 
+and procedural precision. Mice were anesthetized via intraperitoneal 
+injection of ketamine (100 mg per kg body weight) and xylazine (10 mg 
+per kg body weight). For neonatal mice (<P14) with unopened eyes, 
+the eyelids were carefully separated using blunt forceps to create a 
+small fissure along the natural eyelid margin. To establish an entry 
+site, a 0.5-ml 31-gauge insulin syringe (Sol-Millennium, 1653151B-PK) 
+was first inserted and withdrawn at the limbus, followed by injection 
+using a 5-μl Hamilton syringe fitted with a 33-gauge, 0.5-inch sharp 
+needle (point style 4; Hamilton, 7803-15). The needle was advanced 
+toward the center of the vitreous cavity while avoiding contact with 
+the lens. A total of 0.5 μl of solution was injected into the vitreous cav-
+ity for mice younger than P16, and 1 μl for mice older than P16, using 
+minimal, constant pressure over 10 s. The needle was maintained in 
+position for an additional 10 s to minimize reflux, then withdrawn 
+slowly over another 10 s (ref. 52). Success injections were verified by 
+the absence of leakage and maintenance of ocular integrity under 
+a dissecting microscope. Both male and female mice were included 
+in all experimental groups, and no sex-dependent differences were 
+observed in their responses to Eru treatment.
+For C18-pSi and Eru-C18-pSi injections in rd10, WT and RhoP23H mice, 
+bilateral injections were performed. Within the same littermate, pups 
+were randomized to control (C18-pSi) or treatment (Eru-C18-pSi) groups.
+For BDPErucamide injection, bilateral injections were performed 
+for C18-pSi and BDPEru-C18-pSi groups as the original Eru-C18-pSi design.
+For in vivo knockdown experiments, all littermate mice received 
+intravitreal injections of AAV2 viruses. The left eye was injected with 
+an AAV2 carrying a scrambled shRNA control (AAV2-Scr, 2.02 × 1012 
+genome copies (GCs) per ml), while the right eye received an AAV2 
+expressing shRNA targeting TMEM19 (AAV2-shTMEM19, 2.14 × 1012 
+GCs per ml). Five days after the injection, mice were randomly 
+assigned to two treatment groups and bilaterally injected with either 
+C18-pSi or Eru-C18-pSi nanoparticles. The shRNA sequences used 
+were as follows: Scr-shRNA, 5′-CAACAAGATGAAGAGCACC-3′; shT-
+MEM19, 5′-ACGTGCAAAAGGTATATAAAG-3′. AAV2 vectors and other 
+custom reagents are available from the corresponding author upon 
+reasonable request.
+For in vivo neutralizing antibody inhibition experiments, the fol-
+lowing antibodies were bilaterally co-injected with either C18-pSi or 
+Eru-C18-pSi in rd10 mice (vendor, catalog number and concentration 
+indicated): TNF (R&D systems, MAB410, 250 ng μl−1), Rat IgG1 Isotype 
+Control (control for TNF, R&D systems, MAB005, 250 ng μl−1), FGF-2 
+(05-117, Sigma-Aldrich, 1 μg μl−1), Mouse IgG1 Isotype Control (con-
+trol for FGF, R&D systems, MAB002, 1 μg μl−1), VEGF164 (R&D systems, 
+AF-493-NA, 200 ng μl−1) and Goat IgG Control (control for VEGF164, R&D 
+systems, AB-108-C, 200 ng μl−1).
+Ocular metabolite extraction and sample storage
+Metabolite extractions were performed using either whole eyes (for 
+RCS and WT rats) or isolated retinas (for rd10 and WT mice, and human 
+donor samples), as specified below. For RCS and WT rat samples, 
+rodents were euthanized, and whole eyes were immediately enucle-
+ated, rinsed in ice-cold PBS, snap-frozen on dry ice, and stored at 
+−80 °C until extraction. For rd10 and WT mouse samples, eyes were 
+enucleated and placed in PBS on ice. Under a dissection microscope, 
+the retina was carefully separated from the rest of the eyeball and 
+immediately processed for extraction. For human donor samples, 
+peripheral retina from postmortem eyes was dissected and processed 
+similarly. Tissue samples were transferred into 2-ml glass homogeniz-
+ers (Wheaton) and homogenized in a cold extraction solvent consist-
+ing of methanol–chloroform–water–acetic acid (60:25:14:1, vol/vol), 
+a fully miscible mixture optimized for broad-spectrum metabolite 
+recovery. The initial homogenization lasted 30 s, followed by the 
+addition of 200 μl chilled extraction solvent (4 °C) and further homog-
+enization for 90 s. This was followed by two additional homogeniza-
+tion cycles using 600 μl and 400 μl extraction solvent, respectively. 
+After each cycle, the homogenizer was rinsed thoroughly to minimize 
+sample loss. The combined homogenate (~1,200 μl total, including 
+eye fluids) was transferred to a pre-chilled microcentrifuge tube and 
+snap-frozen in liquid nitrogen for 1 min. All homogenates were kept 
+on dry ice during processing. After thawing on ice (4 °C), samples 
+were centrifuged at 16,000g for 10–15 min at 4 °C. The supernatant 
+was collected and optionally stored overnight at −20 °C to allow fur-
+ther precipitation. Samples were then dried using a SpeedVac con-
+centrator without heating. The dried extracts were reconstituted in 
+acetonitrile–water (1:0.8, vol/vol) containing 5% methanol, 5% chlo-
+roform and 0.1% formic acid. Samples were vortexed vigorously or 
+sonicated for 1 min, incubated at 4 °C for ~1 h and centrifuged again 
+to remove debris. Supernatants were transferred to LC–MS vials for 
+metabolomic analysis.
+LC–MS
+For untargeted metabolites in RCS and WT rats, analyses were per-
+formed using a 1260 HPLC system (Agilent Technologies) coupled to 
+a 6538 UHD Accurate-Mass Q-TOF (Agilent Technologies) operated 
+in positive (ESI+) and negative (ESI−) ionization modes. Standards 
+or eye extracts were separated using a Waters Xbridge C18, 3.5 mm, 
+135 A, 150 mm × 1.0 mm; that is, when the instrument was operated in 
+positive ionization mode, the solvent system was A = 0.1% formic acid 
+in water, and B = 0.1% formic acid in acetonitrile. The gradient elution 
+starts with 100% A for injection at 0 min, increases to 80% A at 5 min 
+and reaches 0% A at 43 min, then decreases B from 100% to 98% from 
+43 min to 55 min, then drops to 5% at 60 min. The injection volume 
+was 4 μl. ESI conditions included: gas temperature, 325 °C; drying gas, 
+11 l min−1; nebulizer, 30 psig; fragmentor, 124 V; and skimmer, 65 V. 
+The instrument was set to acquire over the m/z range of 25–1,500, an 
+acquisition rate of 1.3 spectra per second. MS/MS was performed in 
+auto mode, and the instrument was set to acquire over the m/z range of 
+25–1,500, an acquisition rate of 2 spectra per second for MS, 1.5 spectra 
+per second for MS/MS with an iso width (the width half-maximum of 
+the quadrupole mass bandpass used during MS/MS precursor isola-
+tion) of 1.3 m/z. MS/MS scans a maximum of five precursor ions at the 
+same time. It stops after three scans for the same ions, then released 
+after 0.4 min. The cycle time is 3.9 s. For erucamide detection in rd10 
+mice and human peripheral retina, analyses were performed on a 
+Waters I-Class LC and a Waters SQD2 single-quadrupole MS operated 
+in positive ESI mode. A Waters Acquity UPLC BEH C18 column (1.7 μm, 
+2.1 × 50 mm) with an 85–99% B gradient lasting 2.4 min (A: 0.1% aque-
+ous formic acid, B: 0.1% formic acid in methanol, 0.6 ml min−1 flow rate, 
+55 °C column temperature) was used. The product identity and rela-
+tive quantification were determined by mass spectrometry (Waters 
+Unispray, positive SIRs).
+LC–MS data processing and statistics
+LC–MS data from the retina extract were processed using the bioinfor-
+matics analysis software XCMS Online (https://xcmsonline.scripps.
+edu/). The experimental MS/MS spectral data were compared with the 
+reference erucamide MS/MS spectra from the METLIN database (both 
+at a collision energy of 20 eV)17,18,53,54. MS/MS spectra were manually 
+processed by extracting ion chromatograms using Qualitative Analysis 
+
+
+--- Page 15 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+of MassHunter Workstation (Agilent Technologies). pNLC and BPC 
+extractions were performed using MassHunter.
+Preparation of pSi
+Freestanding pSi flakes were purchased from Trutag, prepared using 
+a previously developed ‘perforated etch’ method55. The pSiNPs were 
+obtained by immersing the pSi flakes in ethanol in a sealed vial, which 
+was then immersed in an ultrasonication bath (Ultrasonic bath, 
+97043-960, VWR International) and subjected to ultrasonic fracture 
+conditions for 24 h. The nanoparticle suspension was centrifuged 
+at 1,500g for 20 min to remove large particles at the bottom of the 
+tubes. The nanoparticle suspensions were then centrifuged at high 
+speed (10,000g, 20 min) to pelletize the nanoparticles. The superna-
+tant was discarded to eliminate the smallest nanoparticle fragments 
+that remained in the suspension, and the pellet was resuspended in 
+fresh ethanol. The high-speed centrifugation/resuspension proce-
+dure was carried out two more times to thoroughly wash the nano-
+particles. The resulting pSiNPs displayed an average hydrodynamic 
+size of ~170 nm.
+Surface modification of pSiNPs
+The collected pSiNPs were washed and centrifuged (15,000g, 15 min) 
+twice with toluene to remove residual ethanol. The pSiNPs were 
+then resuspended in toluene and transferred into a glass vial, and 
+n-octadecylsilane was added. The final concentration of pSiNPs and 
+n-octadecylsilane was 3 mg ml−1 and 0.6 mg ml−1, respectively. A reac-
+tion vessel containing the pSiNPs and n-octadecylsilane was heated 
+in a 95 °C oil bath for 24 h with magnetic stirring. The mixture was 
+sonicated occasionally during the reaction to ensure full suspension 
+of the nanoparticles. The particles were subsequently washed and 
+centrifuged three times with toluene and three times with ethanol 
+and finally resuspended in 100% ethanol for storage.
+Characterization of pSiNPs
+Hydrodynamic diameter (size) and the ζ-potential (or surface charge) 
+measurements were obtained on a Zetasizer, Zs90 (Malvern Instru-
+ments). All pSiNP, C18-pSiNP and Eru-C18-pSiNP size measurements 
+and ζ-potential measurements were measured with particles dis-
+persed in deionized water. For hydrodynamic size measurements, 
+400 μl of 10 µg ml−1 of particles were used while for ζ-potential, 800 μl 
+of 10 µg ml−1 of particles were used. The FTIR spectra of the particles 
+were obtained with a Thermo Scientific Nicolet 6700 FTIR instru-
+ment fitted with a Smart iTR diamond ATR fixture. TEM images were 
+obtained using a JEOL 1400 plus electron microscope (JEOL USA) 
+operating at 80 kV and subsequently imaged with a Gatan Oneview 
+camera (Gatan). Thermogravimetric analysis data were obtained 
+using a TA Instruments Discovery SDT 650. Nanoparticle samples 
+were heated from 30–950 °C at a ramp rate of 10 °C min−1 in a pure 
+oxygen atmosphere. Both weight (%) change and derivative heat 
+flow values were assessed, and erucamide content was determined 
+by the difference in mass loss between empty and erucamide-loaded 
+organosilane-modified pSiNPs. Dye-loaded particle constructs were 
+assessed using a Molecular Devices SpectraMax iD5 Multi-Mode 
+Microplate Reader. N2 adsorption/desorption isotherms were 
+obtained using dry nanoparticles at a temperature of 77 K using a 
+Micromeritics ASAP 2020 instrument.
+Loading of erucamide to pSiNPs
+A 10 mg ml−1 stock solution of erucamide was prepared by dissolving 
+erucamide in ethanol overnight. A 3.4 mg ml−1 sample of C18-pSiNPs 
+in ethanol was centrifuged (15,000g, 10 min) to remove free ethanol 
+and the particles were re-dispersed in 1 ml of the 10 mg ml−1 erucamide 
+stock solution. The particles were then subsequently allowed to mix at 
+20 °C overnight. The particles were then centrifuged (15,000g, 10 min) 
+and washed three times with PBS to remove any unbound erucamide 
+and were resuspended in PBS or media and were used immediately 
+after resuspension.
+Cell culture
+The HMC3 cell line (CRL-3304) was purchased from the American Type 
+Culture Collection (ATCC) and cultured with Eagle’s Minimum Essential 
+Medium (EMEM, 30-2003, ATCC). The HEK293T cell line (CRL-3216) 
+was purchased from the ATCC and cultured with Dulbecco’s Modi-
+fied Eagle’s Medium (DMEM, 30-2002, ATCC). For transfection with 
+mTMEM19-Flag plasmid, HEK293T cells were seeded at 1 × 104 cells per 
+cm2 in 2 ml complete medium and grown for 24 h until 80% confluent. 
+Transfection complexes of plasmid (Mouse TMEM19 Gene ORF cDNA 
+clone expression plasmid, C-Flag tag, SinoBiological, MG55126-NF) 
+and Lipofectamine 2000 (Invitrogen, 11668030) were formed at room 
+temperature in serum-free medium before drop-wise addition to the 
+cells, followed by incubation for 5 h and replacement with complete 
+medium for 48 h. IPS cell MPCs were derived from peripheral blood 
+mononuclear cells from a female donor with informed consent. The 
+cell reprogramming was performed by the Harvard iPS core facility 
+utilizing a Sendai virus for reprogramming factor delivery. iPS cells 
+were maintained on Cultrex (R&D systems)-coated plates immersed 
+with mTesR+ medium (STEMCELL Technologies). The cells were pas-
+saged every 3 days around 80% confluence. Colonies containing clearly 
+visible differentiated cells were marked and manually removed before 
+any subsequent passaging. All MPCs were generated using previously 
+described methods34,35. Primary human umbilical vein endothelial cells 
+(PCS-100-010) were purchased from the ATCC and cultured with Vas-
+cular Cell Basal Medium (PCS-100-030) with Endothelial Cell Growth 
+Kit-VEGF (PCS-100-041). Human choroidal endothelial cells (36052-03) 
+were purchased from Celprogen and cultured with Human Choroidal 
+Endothelial Cells Complete Growth Media with Serum (M36052-03S). 
+Human retinal endothelial primary cells (36205-33) were purchased 
+from Celprogen and cultured with Human Retinal Endothelial Cell 
+Culture Media with Serum (M36205-33S). All cells were obtained with 
+verified normal karyotype and were free from contamination.
+PAL method
+HMC3 cells and HEK293T cells were treated with vehicle (ethanol) or a 
+lipid probe for 3 h in the incubator. HMC3 cells were then UV irradiated 
+(10 min) and lysed, and lipid probe-labeled proteins were conjugated 
+to biotin azide by CuAAC reaction. The biotin-labeled proteins were 
+then enriched with streptavidin beads and trypsin digested, and the 
+digested peptides were labeled with TMT, followed by combination, 
+HPLC fractionation and LC–MS/MS analysis36. HEK293T cells were then 
+UV irradiated then UV irradiated and lysed, and lipid probe-labeled pro-
+teins were conjugated to Rhodamine by CuAAC reaction. The labeled 
+proteins were then used for visualizing by western blot.
+Western blotting
+HMC3 cells and HEK293T cells were treated with vehicle (ethanol) or a 
+lipid probe for 3 h in the incubator. Cells were then UV irradiated and 
+lysed, and lipid probe-labeled proteins were conjugated to Rhodamine 
+dye by CuAAC reaction. Around 25 μl samples were fractionated on 
+10% Tris-Glycin SDS–PAGE gel at 275 V (constant) for 240 min, followed 
+by standard western blotting analysis. The following antibodies were 
+used for western blotting: ANTI-FLAG M2 antibody, Mouse monoclonal 
+(Sigma-Aldrich, F1804), horseradish peroxidase-conjugated secondary 
+antibodies (anti-mouse NA9310, GE, 1:5,000 dilution).
+Retinal myeloid cell isolation by flow cytometry
+A postnatal neural dissociation kit (Miltenyi, 130-092-628) was used to 
+prepare a single-cell suspension from mouse retinas. Cells were cen-
+trifuged at 150g for 5 min at 4 °C. The digested tissue was resuspended 
+in 100 μl of 4% FBS in PBS containing an FITC antibody to CD11b (1:100 
+dilution; BioLegend, 101206) and incubated for 20 min on ice. The cells 
+
+
+--- Page 16 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+were washed and suspended with 1 ml of 4% FBS/PBS containing DAPI 
+(1:2,000 dilution; Thermo Fisher Scientific, 62248). Labeled retinal 
+myeloid cells (CD11b positive) were isolated by fluorescence-activated 
+cell sorting (MoFlo Astrios EQ; Beckman Coulter) at the Scripps Flow 
+Cytometry Core Facility. Sorted cells were resuspended in 350 μl of RLT 
+buffer from RNeasy Micro Kit (QIAGEN) and stored at −80 °C.
+RNA isolation, real-time PCR and RNA-seq
+For whole retina and culture cells, single retinas were collected in 
+500 μl of TRIzol and total RNA was isolated using a PureLink RNA Mini 
+Kit (Thermo Fisher Scientific) according to the manufacturer’s instruc-
+tions. Seven hundred and fifty nanograms of RNA was used for RT–qPCR 
+using a high-capacity cDNA reverse transcription kit (Thermo Fisher 
+Scientific). For flow-sorted cells, total RNA was isolated from sorted 
+cells using the RNeasy Micro Kit (QIAGEN) and reverse transcribed 
+using Maxima First Strand cDNA Synthesis Kit for RT–qPCR (Thermo 
+Scientific). qPCR was performed using Power-up SYBR Green PCR 
+Master Mix (Thermo Fisher Scientific) and primers on a Quantstudio 
+5 Real-Time PCR System (Thermo Fisher Scientific). β-actin (Actb) was 
+used as the reference gene for all experiments. Levels of mRNA expres-
+sion were normalized to those in controls as determined using the 
+comparative CT (ΔΔCT) method. RNA samples were used for RNA-seq 
+in Scripps Genetic Cores. Quality control of raw sequencing data was 
+performed using FastQC and MultiQC56. Raw reads were aligned 
+to the reference genome using RSubread57. Gene expression levels 
+were quantified using featureCounts. Post-alignment quality control 
+included assessing the distribution of reads across genomic features 
+(for example, exons, introns) and checking for potential batch effects 
+using principal component analysis. Differential expression analysis 
+was carried out using the limma-voom pipeline1. Data were filtered and 
+normalization was performed using the trimmed mean of M-values 
+method. Linear modeling and empirical Bayes moderation were applied 
+to identify differentially expressed genes. Genes with a false discovery 
+rate-adjusted P value < 0.05 were considered significantly differen-
+tially expressed. Overrepresentation analysis and functional enrich-
+ment analysis were performed with the clusterProfiler58 package using 
+Gene Ontology and KEGG to define biologically relevant pathways and 
+enrichment analysis was conducted.
+Cryosection and immunohistochemistry
+For cryosections, eyecups were fixed in 4% paraformaldehyde (PFA) at 
+4 °C for 4 h. Under a dissecting microscope, a cut was carefully made 
+around the cornea, and the eyecups were transferred to 20% sucrose in 
+PBS at 4 °C for overnight. Samples were embedded in OCT compound 
+(Tissue-Tek, 4566) with the eyecup oriented dorsal side up and the optic 
+nerve positioned at the bottom of the cryomold, then snap-frozen in 
+chilled isopentane on dry ice. Once frozen solid, blocks were wrapped 
+and stored at –80 °C until sectioning. For cryosections, blocks were 
+equilibrated in the cryostat chamber (–20 °C) for 1 h, mounted dorsal side 
+down (optic nerve at the bottom), and sectioned at a thickness of 10 µm. 
+Sections were air-dried and processed for immunohistochemistry using 
+standard protocols59. Briefly, slides were permeabilized and blocked in 
+2% BSA in PBS containing 0.1% Triton X-100 at room temperature for 1 h, 
+followed by incubation with primary antibodies at 4 °C overnight. The 
+following primary antibodies were used: Recoverin (rabbit; Millipore, 
+AB5585; 1:500 dilution), isolectin GS-IB4 (Griffonia simplicifolia, Alexa 
+Fluor 568 conjugated; Thermo Fisher Scientific, I21412; 1:1,000 dilution). 
+Secondary antibodies were obtained from Life Technologies, and the 
+DAB staining kit was purchased from Vector Laboratories.
+Retinal whole-mount staining
+Retinal whole mounts were prepared as previously described with 
+minor modifications52. Eyecups were fixed in 4% PFA at 4 °C for 1 h, then 
+transferred to individual wells of a 48-well plate containing PBS. The 
+cornea was carefully removed using fine forceps and scissors, followed 
+by gentle separation of the sclera and choroid from the retina, avoiding 
+direct contact with the retinal tissue to prevent damage. The lens and 
+hyaloid vasculature were removed, and the isolated retina was used 
+for immunohistochemistry. Samples were incubated with primary 
+antibodies overnight at 4 °C. Antibodies of collagen IV (Millipore, 
+AB756P; 1:200 dilution) and CD11b (BD Biosciences, 550285; 1:500 
+dilution) were used. The following day, tissues were washed and incu-
+bated with secondary antibodies for 2 h and then DAPI staining at room 
+temperature. Following final PBS washes, each retina was transferred 
+to a six-well Teflon-coated slide with 8-mm diameter wells (Electron 
+Microscopy Sciences, 63423-08), positioning the optic nerve head at 
+the center. Four to six evenly spaced radial incisions were made from 
+the periphery toward the center to flatten the retina into a ‘flower-like’ 
+configuration. Retinal petals were gently unfolded and flattened with 
+the vitreous surface facing upward. Excess buffer was removed, and a 
+drop of SlowFade mounting medium (Molecular Probes) was added 
+before applying a coverslip. Slides were imaged immediately or stored 
+at 4 °C in the dark until confocal microscopy.
+Choroid flat-mount staining
+Eyecups were fixed in 4% PFA at 4 °C for 1 h and transferred to individual 
+wells of a 48-well plate containing PBS. The cornea was removed with 
+fine forceps and scissors, followed by careful separation of the RPE–
+choroid–sclera complex from the rest of the eyeball. To remove RPE 
+cells, the remaining tissue was incubated in freshly prepared 1% EDTA 
+in PBS for 2 h at room temperature. For melanin bleaching, tissues 
+were incubated in 10% hydrogen peroxide (Sigma, H1009) diluted in 
+PBS at 55 °C for 90 min in a water bath. After bleaching, tissues were 
+washed three times in PBS and twice in PBS containing 0.1% Triton 
+X-100. Immunohistochemistry staining was then performed using the 
+same procedure as described for retinal whole mounts.
+Confocal microscopy and quantification
+All images were acquired using a confocal laser-scanning microscope 
+(LSM710, Carl Zeiss) and processed with ZEN 2010 software (Carl Zeiss) 
+and ImageJ/Fiji (National Institutes of Health or NIH). For retinal thick-
+ness analysis, recoverin- and DAPI-labeled cryosections were imaged 
+at high resolution. Thickness was measured at eight equidistant radial 
+points extending from the optic nerve toward the peripheral retina 
+on both the nasal and temporal sides. Mean values were calculated 
+for each eye. Eyes injected with erucamide or vehicle (n ≥ 5 per group) 
+were compared. The full procedure was repeated in four independent 
+experiments. Statistical analysis was performed using two-way ANOVA, 
+and data were plotted with GraphPad Prism 10. For vascular density 
+analysis and CD11b+ cell quantification, z-stacks of three-channel con-
+focal images (collagen IV, CD11b and DAPI) were acquired at 5-μm step 
+intervals across the full retinal thickness to capture the superficial, 
+intermediate and deep plexus layers using retinal whole-mount prepa-
+rations. Maximum intensity projections were generated using ImageJ/
+Fiji. Images were split into individual grayscale channels and thresh-
+olded to isolate vascular structures. Vascular density was calculated 
+as the percentage of vessel-covered area relative to the total selected 
+retinal area using the ‘Threshold’ and ‘Vascular density’ plugins in 
+ImageJ/Fiji. CD11b+ cells were quantified from merged three-channel 
+images using the ‘Cell Counter’ plugin in ImageJ/Fiji. Cell counts were 
+performed independently in each vascular layer as well as the ONL.
+Ganzfeld electroretinography
+Mice were adapted to dark overnight, and all procedures were con-
+ducted under red light60. Mice were anesthetized via intraperitoneal 
+injection of ketamine (100 mg per kg body weight) and xylazine (10 mg 
+per kg body weight), and pupils were dilated with 1% tropicamide and 
+2.5% phenylephrine. Five minutes after dilation, mice were placed on 
+a temperature-controlled heating pad to maintain body temperature 
+throughout the recording. Silver needle electrodes were positioned 
+
+
+--- Page 17 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+as the reference (central joules) and ground (skin above the tail), and 
+full-field ERG responses were recorded from both eyes using active 
+contact lens electrodes (Mayo). Recordings were obtained using an 
+electronically controlled Ganzfeld dome (Espion E2 with Colordome; 
+Diagnosys). Scotopic responses were recorded in darkness using a 
+series of white flashes at increasing intensities (0.01, 25 and 50 cd s/m2). 
+After 5 min of light adaptation under a 30 cd/m2 background, pho-
+topic responses were recorded using a 25 cd s/m2 flash, followed by 
+flicker responses at 10 Hz (25 cd s/m2) stimuli. ERG signals were fil-
+tered at 0.3–300 Hz, and signal averaging was applied to improve the 
+signal-to-noise ratio.
+Probe synthesis
+Methods and experimental procedures for syntheses of compound 
+probes (BDPErucamide, Eru.da, Ole.da and Pal.da) are listed in the 
+Supplementary Information.
+Statistical analysis
+Statistical analyses were performed using GraphPad Prism 10 software. 
+Unless otherwise specified, data are presented as the mean ± standard 
+deviation or standard error of the mean. Comparisons between two 
+groups were made using two-tailed unpaired t-tests. For two-factor 
+experimental designs, two-way ANOVA followed by Fisher’s LSD post 
+hoc test was applied. For multiple-group comparisons, the two-stage, 
+step-up method (Benjamini, Krieger and Yekutieli) was used for control-
+ling the false discovery rate in multiple unpaired t-tests. A P value < 0.05 
+was considered statistically significant. All data points represent indi-
+vidual biological replicates, and no statistical methods were used to 
+predetermine sample size. All experiments were repeated indepen-
+dently at least three times.
+Statistics and reproducibility
+No statistical method was used to predetermine sample size. No data 
+were excluded from the analyses. For in vivo experiments using rd10, WT 
+C57BL/6J and RhoP23H mice, animals within the same litter were ran-
+domly assigned to treatment groups (C18-pSi vehicle or Eru-C18-pSi). 
+For the AAV2 knockdown experiments, each mouse received contralat-
+eral eye injections (AAV2-Scr in the left eye, AAV2-shTMEM19 in the right 
+eye), with subsequent bilateral assignment to vehicle or erucamide 
+treatment randomized within litters. Investigators were not blinded 
+to group allocation during in vivo experiments; however, quantifica-
+tion of retinal layer thickness, vascular density, CD11b+ cell counts 
+and ERG analysis were performed using standardized automated or 
+semiautomated methods to minimize subjective bias. For in vitro 
+experiments (iPS cell-MPC treatments, PAL assays, qPCR), treatments 
+were performed in parallel under identical conditions. All experiments 
+were independently repeated at least three times with similar results, 
+except where otherwise stated in the figure legends.
+Reporting summary
+Further information on research design is available in the Nature 
+Portfolio Reporting Summary linked to this article.
+Data availability
+The RNA-seq raw data generated in this study have been deposited in 
+the NCBI Gene Expression Omnibus under accession code GSE284637 
+(token: ixqlwguktpgfjwr for review).
+The proteomics data from the PAL assay are provided as 
+Supplementary Information.
+All other data supporting the findings of this study are available from 
+the corresponding author upon reasonable request. Source data are 
+provided with this paper.
+Code availability
+This paper does not report the original code.
+References
+52.	 Aguilar, E. et al. Chapter 6. Ocular models of angiogenesis. 
+Methods Enzymol. 444, 115–158 (2008).
+53.	 Zhu, Z.-J. et al. Liquid chromatography quadrupole time- 
+of-flight mass spectrometry characterization of metabolites 
+guided by the METLIN database. Nat. Protoc. 8, 451–460  
+(2013).
+54.	 Kang, J. et al. Self-sealing porous silicon-calcium silicate 
+core-shell nanoparticles for targeted siRNA delivery to the injured 
+brain. Adv. Mater. 28, 7962–7969 (2016).
+55.	 Ewels, P., Magnusson, M., Lundin, S. & Kaller, M. MultiQC: 
+summarize analysis results for multiple tools and samples in a 
+single report. Bioinformatics 32, 3047–3048 (2016).
+56.	 Liao, Y., Smyth, G. K. & Shi, W. The R package Rsubread is  
+easier, faster, cheaper and better for alignment and quantifi­
+cation of RNA sequencing reads. Nucleic Acids Res. 47,  
+e47 (2019).
+57.	 Wu, T. et al. clusterProfiler 4.0: a universal enrichment tool for 
+interpreting omics data. Innovation 2, 100141 (2021).
+58.	 Westenskow, P. D. et al. Ras pathway inhibition prevents 
+neovascularization by repressing endothelial cell sprouting.  
+J. Clin. Invest. 123, 4900–4908 (2013).
+59.	 Lim, E. W. et al. Serine and glycine physiology reversibly modulate 
+retinal and peripheral nerve function. Cell Metab. 36, 2315–2328 
+(2024).
+60.	 Shen, Q. et al. Endothelial cells stimulate self-renewal and 
+expand neurogenesis of neural stem cells. Science 304, 
+1338–1340 (2004).
+Acknowledgements
+We thank M. Gantner, L. Scheppke and M. Dorrell for their comments 
+on the paper.
+We thank L. Zhu and M. Gillies (The University of Sydney) for their 
+assistance in obtaining peripheral retinal tissue from postmortem 
+human donor eyes, sourced through the Lions NSW Eye Bank.
+Author contributions
+G.S., B.C., M.J.S., D.B. and M.F. conceived and designed the study. 
+Data acquisition and processing were performed by G.W., S.C., Q.Y., 
+S.V., D.O., S.G., P.W., J.W., R.F., H.P., K.B., E.A., J.R., A.U.-O., R.B. and K.E. 
+Data were visualized by G.W., K.B., S.C., Q.Y., D.O., P.W., J.W. and R.B. 
+Data interpretation was done by G.W. Funding acquisition was done 
+by M.J.S. and M.F. Writing of the original draft was performed by G.W., 
+S.C., K.E. and M.F. All authors contributed to the review and editing of 
+this paper.
+Funding
+We thank the Lowy Medical Research Institute for funding this work 
+(MF001). The earlier phases of this project were funded by grants 
+from the National Eye Institute (R01EY11254 and 5R24EY017540) 
+and the California Institute for Regenerative Medicine (TR1-01219) to 
+M.F. Additional funding came from the National Science Foundation 
+through the UC San Diego Materials Research Science and 
+Engineering Center (UCSD MRSEC; DMR-2011924) and from the NIH 
+(2R01AI132413) to M.J.S. This work was also performed in part at the 
+San Diego Nanotechnology Infrastructure (SDNI) of UCSD, a member 
+of the National Nanotechnology Coordinated Infrastructure, which 
+is supported by NSF (ECCS-2025752) to M.J.S. S.V. acknowledges 
+financial support from the Natural Sciences and Engineering 
+Research Council of Canada Postgraduate Scholarship–Doctoral 
+program (NSERC PGS-D). Additional support was provided by NIH 
+grants DA015648 to D.B., R35 GM130385 to G.S., U01 CA235493 
+to G.S. and U01 CA305256 to G.S. The funders had no role in the 
+study design, data collection and analysis, decision to publish or 
+preparation of the manuscript.
+
+
+--- Page 18 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Competing interests
+M.J.S. is a scientific founder (SF) and member of the Board of 
+Directors, Advisory Board (AB) and Scientific Advisory Board (SAB), 
+and acts as a paid consultant (PC) or has an equity interest (EI) in the 
+following: Aivocode (AB, EI); Bejing ITEC Technologies (SAB, PC); 
+Hinalea Imaging (EI); Illumina (EI); Impilo Therapeutics (SAB, EI); Lisata 
+Therapeutics (EI); Matrix Technologies (EI); Precis Therapeutics (SF, 
+BOD, EI); Quanterix (EI); Spinnaker Biosciences (SF, BOD, EI); TruTag 
+Technologies (SAB, EI); and Well-Healthcare Technologies (SAB, PC). 
+Although one or more of the grants that supported this research has 
+been identified for conflict-of-interest management based on the 
+overall scope of the project and its potential benefit to the companies 
+listed, the research findings included in this publication may not 
+necessarily relate to their interests. The terms of these arrangements 
+have been reviewed and approved by the University of California, San 
+Diego in accordance with its conflict-of-interest policies. The other 
+authors declare no competing interests.
+Additional information
+Extended data is available for this paper at https://doi.org/10.1038/
+s41593-026-02341-w.
+Supplementary information The online version contains 
+supplementary material available at https://doi.org/10.1038/s41593-
+026-02341-w.
+Correspondence and requests for materials should be addressed to 
+Martin Friedlander.
+Peer review information Nature Neuroscience thanks Luis 
+Alarcon-Martinez and the other, anonymous, reviewer(s) for their 
+contribution to the peer review of this work.
+Reprints and permissions information is available at  
+www.nature.com/reprints.
+
+
+--- Page 19 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 1 | See next page for caption.
+
+
+--- Page 20 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 1 | Erucamide is detected in both mouse and human eyes. 
+a, Erucamide level is attenuated in rd10 at P12 (two-sided multiple unpaired 
+t-test, n = 6 for WT and n = 8 for rd10; p = 0.021) and P28 (two-sided multiple 
+unpaired t-test, n = 5 for WT and n = 6 for rd10; p = 0.0013) (n = 7 for WT and rd10 
+at P6). b, Erucamide is detected by HPLC-MS/MS in peripheral retinal tissue from 
+post-mortem human donor eyes (n = 6, age range 62-85) from Lions NSW Eye 
+Bank, Sydney Local Health District Ethics Review Committee (2020/ETH03339). 
+c, Summarized table of samples information and concentration of erucamide 
+per nanogram of retinal tissue in (b). d,e, Erucamide intravitreal injection didn’t 
+cause choroidal neovascularization in both rd10 and WT mice by cryosection 
+immunostaining (d) or choroidal flat mount staining (e). Vessels were labeled by 
+Collagen IV in red. f, Quantification of choroidal Collagen IV+ area in rd10 mice 
+showed no significant differences between control and erucamide treatment 
+(two-tailed unpaired t-test, n = 6, p = 0.9058). For a, f, box plots show median 
+(centre line), 25th–75th percentile (box bounds), minimum to maximum values 
+(whiskers), with all individual data points shown.
+
+
+--- Page 21 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 2 | See next page for caption.
+
+
+--- Page 22 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 2 | Characterization of erucamide-loaded, silane-
+functionalized nanoparticles (Eru-C18-pSiNPs). a, Erucamide-C18-pSiNPs have 
+no toxicity in multiple cells. Human umbilical vein endothelial cells (HUVECs), 
+human choroidal endothelial cells (ChECs), human retinal endothelial cells 
+(RECs), human iPSC-derived macrophage precursor cells (MPCs), and human 
+microglia cell line (HMC3) were incubated with various concentrations 
+of C18-pSiNP constructs for 48 hours. The cell viability was assessed using 
+Invitrogen™LIVE/DEAD™ Viability/Cytotoxicity Kit following the manufacturer’s 
+protocol. (two-sided multiple unpaired t-test, n = 3 independent biological 
+replicates) b, Transmission Electron Microscopy60 images of freshly etched 
+(pSiNP) and octadecylsilane-functionalized (C18-pSiNP) and erucamide-
+loaded, octadecylsilane-functionalized particles (Eru-C18-pSiNP) (scale bar 
+= 200 nm). c, Dynamic light scattering (DLS) data of size distribution and d, 
+ζ-potential measurements in deionized water. (n = 3) e, Fourier Transform 
+Infrared Spectroscopy (FTIR) spectra of pSiNPs functionalized with silanes and 
+loaded with erucamide. f, Thermogravimetric analysis (TGA) measurements 
+of erucamide and C18-silane. g, TGA measurements of pSi, C18-pSi, and Eru-
+C18-pSi. The weight change (%) curve provides an estimate of the amount of 
+functionalized C18-silane and loaded erucamide in particles. The measurements 
+indicated a weight percent loss of 6.4% (wt.%) of erucamide within the particles at 
+the end of 950 °C when erucamide was fully combusted. For a, d, box plots show 
+median (centre line), 25th-75th percentile (box bounds), minimum to maximum 
+values (whiskers), with all individual data points shown.
+
+
+--- Page 23 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 3 | Erucamide rescue degeneration in RhoP23H mice.  
+a, Schematic illustration of Eru-C18-pSi (214 ng) intravitreal injection in RhoP23H 
+homozygous mice. b, Quantification of retinal layer thickness. (two-sided 
+multiple unpaired t-test, n = 4 for vehicle, n = 5 for Eru; ONL: p = 0.8116. INL: 
+p = 0.0073.) c, Vascular density quantification of all retinal vessel layers. (two-
+tailed unpaired t-test, n = 4 for vehicle, n = 5 for Eru, p = 0.0138.) At this disease 
+stage, advanced retinal degeneration limited reliable separation of individual 
+vascular plexuses; vessels were therefore analyzed as a combined all-layer metric. 
+d, ERG measurements of all scotopic waves and photopic responses to a flash 
+in dark-adapted RD mice injected with Eru or vehicle at P43 (two-sided multiple 
+unpaired t-test, n = 4 per group). Eru versus vehicle, p = 0.043 for Scotopic 
+B-wave at 25 cd*s/m2 intensity, p = 0.04 for flickers. e, Representative traces of 
+scotopic B-wave at 25 (left) and 50 cd*s/m2 (right) intensity by ERG in eyes treated 
+with vehicle (upper) and erucamide (lower). For b-d, box plots show median 
+(centre line), 25th-75th percentile (box bounds), minimum to maximum values 
+(whiskers), with all individual data points shown.
+
+
+--- Page 24 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 4 | Identifying the binding protein of erucamide in 
+microglia by photoaffinity labeling (PAL). a, Erucamide, oleamide and 
+palmitamide probes show overlapping but distinct protein interaction profiles in 
+HMC3 cells. Red stars indicated Eru.da specific labelled proteins, they are labeled 
+only by Eru. da when compared to Ole. da and Pal. Da at both 0.5 h and 24 h 
+incubated samples, they also show highest binding capacity with Eru. da at  
+3-6 h. Representative of 3 independent experiments with similar results.  
+b, Involvement in specific biological processes of erucamide targeting proteins. 
+c, Protein class distribution of erucamide targeting proteins. (b-c, for top 65 list: 
+Eru.da/Ole.da>2 & Eru.da/Pal.da>2)
+
+
+--- Page 25 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 5 | See next page for caption.
+
+
+--- Page 26 ---
+
+Nature Neuroscience
+Article
+https://doi.org/10.1038/s41593-026-02341-w
+Extended Data Fig. 5 | TMEM19 is a novel target protein of erucamide in MPCs. 
+a, RNA-seq pathway enrichment analysis of erucamide-mediated pathways in 
+Scrambled MPCs compared to empty pSiNPs treatment using KEGG-database, 
+all genes are used, the direction of effect is tested to see if pathway is upregulated 
+or downregulated. Upregulated cytokine-cytokine receptor pathway is labeled 
+in red box. b, KEGG analysis of general pathways in siTMEM19 MPCs compared to 
+Scrambled MPCs. c, KEGG analysis of erucamide mediate pathways in siTMEM19 
+MPCs compared to empty pSiNPs treatment. Downregulated cytokine-cytokine 
+receptor pathway is labeled in purple box. d, TMEM19 and two other candidates 
+(DRAM2 and TMBIM6) from chem-proteomics are knocked down in iPSC-MPCs 
+by siRNA (two-sided two-way ANOVA with Šídák’s multiple comparisons test, 
+n = 3, Scramble vs. siRNA: TMEM19 p < 0.0001, DRAM2 p < 0.0001, TMBIM6 
+p < 0.0001). e, Angiogenic factors are not upregulated in TMEM19-deprived 
+cells, but not in other cell groups. N = 3, C18-pSi vs. Eru-C18-pSi (two-sided two-way 
+ANOVA with Šídák’s multiple comparisons test). FGF2: Scramble p < 0.0001, 
+siTMEM19 ns (p = 0.9985), siDRAM2 p < 0.0001, siTMBIM6 p < 0.0001. VEGF: 
+Scramble p < 0.0001, siTMEM19 ns (p = 0.6089), siDRAM2 p < 0.0001, siTMBIM6 
+p = 0.0042. PDGFα: Scramble p = 0.0007, siTMEM19 ns (p = 0.9716), siDRAM2 
+p = 0.0203, siTMBIM6 ns (p = 0.9994)f, The general activation of MPCs by DMOG, 
+LPS and TGFβ1 are not affected by TMEM19 knock-down while the activation 
+by erucamide (0.64 µM) is through TMEM19 (Two-sided multiple unpaired 
+t-test with Benjamini-Krieger-Yekutieli FDR correction, n = 3. DMSO vs. DMOG: 
+Scramble p = 0.000372, siTMEM19 p = 0.000324. DMSO vs. LPS: Scramble 
+p < 0.0001, siTMEM19 p = 0.000153. DMSO vs. TGFβ1: Scramble p = 0.000109, 
+siTMEM19 p = 0.000660. C18-pSi vs. Eru-C18-pSi: Scramble p = 0.0293, siTMEM19 
+ns (p = 0.9045). g, CD11b+ myeloid cells quantification in different layers in P32 
+rd10 retinas injected with AAV-shTMEM19 viruses in the right eye, while the 
+left eye was injected with AAV2-Scr viruses. Then 5 days later, both eyes were 
+injected with vehicle or Eru (n = 7 for AAV2-Scr+vehicle, n = 8 for AAV2-Scr+Eru, 
+n = 7 for AAV2-shTMEM19+vehicle, n = 8 for AAv2-shTMEM19+Eru), Two-sided 
+multiple unpaired t-test with Benjamini-Krieger-Yekutieli FDR correction. 
+AAV2-Scr + C18-pSi vs. AAV2-Scr + Eru-C18-pSi: Superficial plexus p = 0.000083, 
+Intermediate plexus p = 0.000659, Deep plexus p < 0.0001, ONL p = 0.000346. 
+AAV2-shTMEM19 + C18-pSi vs. AAV2-shTMEM19 + Eru-C18-pSi: Superficial plexus 
+p = 0.0198, all other comparisons ns. h, Retinal flat mount staining of the P32 rd10 
+retinas injected as in (g), vasculature is immunolabeled in red with Collagen IV, 
+and CD11b+ myeloid cells were labeled in green. i, Quantification of retinal layer 
+thickness (n = 5, two-sided two-way ANOVA with Šídák’s multiple comparisons 
+test. ONL: AAV2-Scr + C18-pSi vs. AAV2-Scr + Eru-C18-pSi p = 0.0024, all other 
+comparisons ns. INL: AAV2-Scr + C18-pSi vs. AAV2-Scr + Eru-C18-pSi p = 0.0466, all 
+other comparisons ns). For d-g, I, box plots show median (centre line), 25th-75th 
+percentile (box bounds), minimum to maximum values (whiskers), with all 
+individual data points shown.
+
+
+--- Page 27 ---
+
+1
+nature portfolio  |  reporting summary
+April 2023
+Corresponding author(s):
+Martin Friedlander
+Last updated by author(s): 04/23/2026
+Reporting Summary
+Nature Portfolio wishes to improve the reproducibility of the work that we publish. This form provides structure for consistency and transparency 
+in reporting. For further information on Nature Portfolio policies, see our Editorial Policies and the Editorial Policy Checklist.
+Statistics
+For all statistical analyses, confirm that the following items are present in the figure legend, table legend, main text, or Methods section.
+n/a Confirmed
+The exact sample size (n) for each experimental group/condition, given as a discrete number and unit of measurement
+A statement on whether measurements were taken from distinct samples or whether the same sample was measured repeatedly
+The statistical test(s) used AND whether they are one- or two-sided 
+Only common tests should be described solely by name; describe more complex techniques in the Methods section.
+A description of all covariates tested
+A description of any assumptions or corrections, such as tests of normality and adjustment for multiple comparisons
+A full description of the statistical parameters including central tendency (e.g. means) or other basic estimates (e.g. regression coefficient) 
+AND variation (e.g. standard deviation) or associated estimates of uncertainty (e.g. confidence intervals)
+For null hypothesis testing, the test statistic (e.g. F, t, r) with confidence intervals, effect sizes, degrees of freedom and P value noted 
+Give P values as exact values whenever suitable.
+For Bayesian analysis, information on the choice of priors and Markov chain Monte Carlo settings
+For hierarchical and complex designs, identification of the appropriate level for tests and full reporting of outcomes
+Estimates of effect sizes (e.g. Cohen's d, Pearson's r), indicating how they were calculated
+Our web collection on statistics for biologists contains articles on many of the points above.
+Software and code
+Policy information about availability of computer code
+Data collection
+GraphPad Prism 10; XCMS Online (v3.7.0); ZEN 2010 (Carl Zeiss); ImageJ/Fiji (NIH, v1.54); FastQC (v0.11.9); MultiQC (v1.12); RSubread/
+featureCounts (v2.0.3); limma-voom (v3.52.0); clusterProfiler (v4.0); METLIN database; AlphaFold Protein Structure Database
+Data analysis
+GraphPad Prism 10; ImageJ/Fiji (v1.54); limma-voom (v3.52.0); clusterProfiler (v4.0); XCMS Online (v3.7.0)
+For manuscripts utilizing custom algorithms or software that are central to the research but not yet described in published literature, software must be made available to editors and 
+reviewers. We strongly encourage code deposition in a community repository (e.g. GitHub). See the Nature Portfolio guidelines for submitting code & software for further information.
+Data
+Policy information about availability of data
+All manuscripts must include a data availability statement. This statement should provide the following information, where applicable: 
+- Accession codes, unique identifiers, or web links for publicly available datasets 
+- A description of any restrictions on data availability 
+- For clinical datasets or third party data, please ensure that the statement adheres to our policy 
+ 
+RNA-seq data are deposited in NCBI GEO under accession code GSE284637. MS and PAL data are in supplementary excels. Source data for all figures are provided 
+with this paper. All other data are available from the corresponding author upon reasonable request.
+
+
+--- Page 28 ---
+
+2
+nature portfolio  |  reporting summary
+April 2023
+Research involving human participants, their data, or biological material
+Policy information about studies with human participants or human data. See also policy information about sex, gender (identity/presentation), 
+and sexual orientation and race, ethnicity and racism.
+Reporting on sex and gender
+N/A
+Reporting on race, ethnicity, or 
+other socially relevant 
+groupings
+N/A
+Population characteristics
+N/A
+Recruitment
+N/A
+Ethics oversight
+N/A
+Note that full information on the approval of the study protocol must also be provided in the manuscript.
+Field-specific reporting
+Please select the one below that is the best fit for your research. If you are not sure, read the appropriate sections before making your selection.
+Life sciences
+Behavioural & social sciences
+ Ecological, evolutionary & environmental sciences
+For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf
+Life sciences study design
+All studies must disclose on these points even when the disclosure is negative.
+Sample size
+No statistical method was used to predetermine sample size. Sample sizes were chosen based on previous experience with similar 
+experiments and standard practice in the field.
+Data exclusions
+No data were excluded from the analyses.
+Replication
+All experiments were independently repeated at least 3 times with similar results, except where stated in figure legends.
+Randomization
+For in vivo experiments, animals within the same litter were randomly assigned to treatment groups. 
+Blinding
+Investigators were not blinded to group allocation during in vivo experiments. Quantification of retinal layer thickness, vascular density, 
+CD11b+ cell counts, and ERG were performed using standardized automated or semi-automated methods to minimize subjective bias.
+Reporting for specific materials, systems and methods
+We require information from authors about some types of materials, experimental systems and methods used in many studies. Here, indicate whether each material, 
+system or method listed is relevant to your study. If you are not sure if a list item applies to your research, read the appropriate section before selecting a response. 
+Materials & experimental systems
+n/a Involved in the study
+Antibodies
+Eukaryotic cell lines
+Palaeontology and archaeology
+Animals and other organisms
+Clinical data
+Dual use research of concern
+Plants
+Methods
+n/a Involved in the study
+ChIP-seq
+Flow cytometry
+MRI-based neuroimaging
+Antibodies
+Antibodies used
+CD11b (1:100; BioLegend, 101206, For FACs), TNFa (R&D systems, MAB410, 250 ng/μL), FGF-2 (05-117, Sigma-Aldrich, 1 μg/μL), and 
+VEGF164 (R&D systems, AF-493-NA, 200 ng/μL), ), Rat IgG1 Isotype Control (control for TNF, R&D systems, MAB005, 250 ng/μL), 
+Mouse IgG1 Isotype Control (control for FGF, R&D systems, MAB002, 1 μg/μL), Goat IgG Control (control for VEGF164, R&D systems, 
+
+
+--- Page 29 ---
+
+3
+nature portfolio  |  reporting summary
+April 2023
+AB-108-C, 200 ng/μL), collagen IV (rabbit; AB756P, Millipore), Recoverin (rabbit, AB5585-I, Millipore), and CD11b (rat, 550282, BD), 
+Isolectin GS-IB4, Alexa Fluor® 568 Conjugated (I21412, Thermofisher), Monoclonal ANTI-FLAG M2 (F3165-0.2MG, Sigma)
+Validation
+FITC anti-mouse/human CD11b Antibody from Biolegend was used for FACs of CD11b+ cells from mouse retinas.  
+TNFa, FGF-2 and VEGF164 were used as neutralizing antibodies in mouse retinas, they are all anti-mouse antibodies, and the 
+corresponding IgG were used as control groups. 
+collagen IV, Recoverin, and CD11b (rat, 550282, BD) were used for mouse retinal staining, they are all anti-mouse.  
+Isolectin GS-IB4 is used for flat-mount staining in mouse retinas. 
+Monoclonal ANTI-FLAG M2 (F3165-0.2MG, Sigma)recoagnizes flag-tag, it was used in western blot for TMEM19-flag over expressed 
+HEK-293T cells. 
+All antibodies were Manufacturer validated.
+Eukaryotic cell lines
+Policy information about cell lines and Sex and Gender in Research
+Cell line source(s)
+HMC3 cell line (CRL-3304™) was purchased from ATCC and cultured with Eagle's Minimum Essential Medium (EMEM, 
+30-2003™, ATCC). HEK293T cell line (CRL-3216) was purchased from ATCC and cultured with Dulbecco's Modified Eagle's 
+Medium (DMEM, 30-2002 ™, ATCC). Primary Human Umbilical Vein Endothelial Cells (HUVEC) (PCS-100-010 ™) were 
+purchased from ATCC and cultured with Vascular Cell Basal Medium (PCS-100-030) with Endothelial Cell Growth Kit-VEGF 
+(PCS-100-041). Human Choroidal Endothelial Cells (36052-03) were purchased from Celprogen and cultured with Human 
+Choroidal Endothelial Cells Complete Growth Media with Serum (M36052-03S). Human Retinal Endothelial Primary Cell 
+(36205-33) were purchased from Celprogen and cultured with Human Retinal Endothelial Cell Culture Media with Serum 
+(M36205-33S). IPSC MPCs were derived from peripheral blood mononuclear cells from a female donor with informed 
+consent. The cell reprogramming was performed by the Harvard iPS core facility utilizing a sendai virus for reprogramming 
+factor delivery.
+Authentication
+All cell lines were obtained directly from ATCC or Celprogen with verified normal karyotype and contamination-free 
+certificates. iPSC-MPCs were derived from PBMCs, karyotype verified by Harvard iPS Core Facility. Cell lines were not 
+independently authenticated by the authors.
+Mycoplasma contamination
+All cell lines were tested negative for mycoplasma contamination
+Commonly misidentified lines
+(See ICLAC register)
+All cell lines Not on ICLAC misidentified list
+Animals and other research organisms
+Policy information about studies involving animals; ARRIVE guidelines recommended for reporting animal research, and Sex and Gender in 
+Research
+Laboratory animals
+RCS rats were obtained from Dr. Matthew LaVail, UCSF. rd10 mice (B6. CXB1-Pde6brd10/J), WT mice (C57BL/6J), and RhoP23H mice 
+(B6.129S6(Cg)-Rhotm1.1Kpal/J) are available through the Jackson Labs. Housing condition: 12 h light/12 h dark cycle, 22 ± 2°C, 45–
+65% relative humidity, ad libitum standard rodent chow and water.
+Wild animals
+The study did not involve wild animals. 
+Reporting on sex
+RCS rats and all mice of both sexes were used without bias in all of our experiments.
+Field-collected samples
+The study did not involve samples collected from the field.
+Ethics oversight
+ Ethical approval by Scripps Research IACUC protocol number 08-0045
+Note that full information on the approval of the study protocol must also be provided in the manuscript.
+Novel plant genotypes
+N/A
+Seed stocks
+N/A
+Authentication
+N/A
+Plants
+
+
+--- Page 30 ---
+
+4
+nature portfolio  |  reporting summary
+April 2023
+Flow Cytometry
+Plots
+Confirm that:
+The axis labels state the marker and fluorochrome used (e.g. CD4-FITC).
+The axis scales are clearly visible. Include numbers along axes only for bottom left plot of group (a 'group' is an analysis of identical markers).
+All plots are contour plots with outliers or pseudocolor plots.
+A numerical value for number of cells or percentage (with statistics) is provided.
+Methodology
+Sample preparation
+A postnatal neural dissociation kit (Miltenyi, 130-092-628) was used to prepare a single cell suspension from mouse retinas. 
+Cells were centrifuged at 150 xg for 5 min at 4°C. The digested tissue was resuspended in 100 μL of 4% FBS in PBS containing 
+an FITC antibody to CD11b (1:100; BioLegend, 101206) and incubated for 20 min on ice. The cells were washed and 
+suspended with 1 ml of 4% FBS/PBS containing DAPI (1:2000; Thermo Fisher Scientific, 62248). 
+Instrument
+Beckman Coulter, MoFlo Astrios EQ cell sorter equipped with 405nm, 488 nm, 561nm and 640nm excitation lasers. 
+Software
+Beckman Coulter, Summit Software, version 6.3.1. 
+Cell population abundance
+3000-7000 cells/sample
+Gating strategy
+Step 1: Sort Plots                                                                                                                  
+DAPI vs DRAQ5. DRAQ5 separates cells from debris.  DAPI is used to distinguish live cells from dead.  
+Step 2: Scatter Plots as indicated in the box of “Cells”  
+FSC vs SSC. 488nm forward scatter (FSC) information on cell size.  488nm side scatter (SSC) information on cell shape or 
+complexity. Used to distinguish cell types and separates cells from debris.  
+Step 3: Doublet Discrimination Plots                                         
+SSC Pulse Height vs SSC Pulse Width & FSC Pulse Height vs FSC Pulse Width Used to exclude doublets from the sorted 
+population.   
+Step 4: Fluorescence Plot                                                                                
+FITC CD11b vs SSA Used to distinguish CD11b positive and negative cells. CD11b+ cells were used for RNA extraction and 
+qPCR in Fig. 3g. 
+Tick this box to confirm that a figure exemplifying the gating strategy is provided in the Supplementary Information.

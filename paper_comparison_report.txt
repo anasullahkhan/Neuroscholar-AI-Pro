@@ -1,0 +1,85 @@
+### 1. Paper 1 Summary
+
+* **Research problem:** Traditional reading models fail to integrate neurological perspectives. They incorrectly show reading as a simple, single-region, serial process of decoding letters to sounds, rather than explaining the complex brain networks involved from word recognition to high-order comprehension.
+* **Method used:** A literature review and overview of neuroscience laboratory research findings (including studies using PET, fMRI, and eye-tracking technologies).
+* **Main findings:** 
+  * Reading is not just a serial activity; it is a parallel, interconnected process involving multiple brain regions, including Broca’s area, Wernicke's area, the prefrontal cortex, the temporal lobes, the cerebellum, and the limbic system.
+  * Syntactic (grammatical) and semantic (meaning) processing initially occur in parallel and are integrated in the anterior inferior frontal gyrus at around 400–600 milliseconds.
+  * Reading is deeply connected to emotion and memory via the limbic system. While mild stress can help learning, excessive stress harms cognitive performance.
+  * Words with emotional meanings speed up reading attention and fixation times compared to neutral words.
+* **Limitations:** Not available in the provided paper text.
+* **Future work:** Integrating these neurobiological findings into a complete model of automatic reading and reading comprehension to help educators design evidence-based reading instruction.
+
+---
+
+### 2. Paper 2 Summary
+
+* **Research problem:** Understanding how the brain adapts to stress, and how an imbalance in the stress-response system leads to stress-related brain diseases (such as depression and PTSD) in genetically vulnerable individuals.
+* **Method used:** A literature review of stress neurobiology, including molecular, cellular, and genomic studies (such as SAGE and DNA microarrays).
+* **Main findings:** 
+  * Stress triggers the hypothalamic-pituitary-adrenocortical (HPA) axis, releasing corticosteroid hormones (cortisol in humans, corticosterone in rodents).
+  * These hormones bind to two nuclear receptors in the brain: mineralocorticoid receptors (MR), which have high affinity and control appraisal and initiation of the stress response; and glucocorticoid receptors (GR), which have lower affinity and help terminate the stress response and promote recovery/memory.
+  * Corticosteroids act as transcriptional regulators, altering the expression of 70–100 genes in the hippocampus to modulate brain structure and excitability.
+  * An inadequate or excessive stress response (high allostatic load) can trigger vulnerability to mental illnesses, resulting in hypercortisolaemia (as seen in depression) or hypocortisolaemia (as seen in PTSD).
+* **Limitations:** Not available in the provided paper text.
+* **Future work:** Identifying new candidate susceptibility genes to serve as markers for predicting which individuals have vulnerable phenotypes.
+
+---
+
+### 3. Similarities Between Papers
+
+* Both papers emphasize that cognitive functions (such as learning, attention, and memory) are deeply interconnected with emotional processing in the brain.
+* Both papers highlight the limbic system (including the prefrontal cortex and temporal/hippocampal regions) as a crucial center for coordinating these cognitive and emotional networks.
+* Both papers agree that stress plays a dual role in cognitive performance: a certain level of stress can be adaptive or helpful, but excessive or prolonged stress is harmful to brain function.
+* Both papers are scientific literature reviews that synthesize findings from laboratory-based research to explain brain behavior.
+
+---
+
+### 4. Differences Between Papers
+
+* **Core Focus:** Paper 1 focuses on the cognitive and linguistic mechanics of reading (such as visual word recognition, syntactic-semantic processing, and sentence comprehension). Paper 2 focuses on the endocrine and molecular mechanics of the general stress response (such as hormone release, receptor binding, and gene transcription).
+* **Biological Level of Analysis:** Paper 1 analyzes brain function mostly at the structural and network level (specific brain areas like Broca’s and Wernicke’s areas, and timing in milliseconds). Paper 2 analyzes brain function at the chemical, genetic, and molecular level (corticosteroids, MR/GR receptors, DNA microarrays, and synaptic excitability).
+* **Definition of Stress:** Paper 1 views stress generally as an emotional barrier to classroom learning and reading. Paper 2 views stress through a precise biological framework of homeostasis, allostasis, and HPA-axis regulation.
+
+---
+
+### 5. Possible Research Gaps
+
+* **The Molecular Impact of Stress on Linguistic Processing:** Paper 1 notes that excessive classroom stress hurts reading comprehension, while Paper 2 explains the precise molecular mechanics of how stress hormones (corticosteroids) bind to MR and GR receptors to alter hippocampal genes. However, there is a gap in research showing how these specific hormonal and genetic changes (from Paper 2) physically affect the rapid, millisecond-level integration of syntax and semantics (from Paper 1) during stressful reading tasks. 
+* **Reading as a Direct Stress-Recovery Stimulus:** Paper 1 mentions that reading emotional words can capture attention, and Paper 2 describes how the GR system facilitates recovery and memory storage. It remains a gap whether reading specialized linguistic materials (such as positive emotional texts) can act as a direct behavioral regulator to normalize HPA-axis activity and lower cortisol levels in highly stressed individuals.
+
+---
+
+### 6. Possible New Hypotheses
+
+#### Hypothesis 1
+* **Hypothesis:** High-stress environments impair reading comprehension by over-activating glucocorticoid receptors (GR) in the limbic system, which delays the 400–600 millisecond integration of syntactic and semantic processing.
+* **Why it is possible:** Paper 2 states that large amounts of stress hormones activate GR, which alters gene expression, suppresses cell processes, and normalizes brain excitability. Paper 1 states that reading is a parallel process requiring rapid syntactic and semantic integration (at 400–600 ms) and that excessive stress harms this cognitive performance.
+* **Evidence from papers:** Paper 1 shows that reading relies on the limbic system and that stress harms performance. Paper 2 shows that GR activation occurs during high-stress states and modifies limbic network functions.
+* **What is still uncertain:** It is still uncertain whether GR over-activation directly alters the specific timing of the 400–600 ms linguistic integration window.
+
+#### Hypothesis 2
+* **Hypothesis:** Reading texts containing highly positive emotional words accelerates physiological stress recovery by promoting a faster return of GR-mediated homeostatic balance.
+* **Why it is possible:** Paper 1 notes that words with emotional qualities have specific neurological mechanisms that speed up attention and processing time. Paper 2 states that effective coping requires the stress response to be efficiently terminated, which is regulated by GR-mediated recovery pathways.
+* **Evidence from papers:** Paper 1 shows faster fixation times for emotional words. Paper 2 explains that GR activation coordinates recovery and adaptation to prepare the brain for future events.
+* **What is still uncertain:** It is unknown if the cognitive processing of positive words can trigger the physical termination of the endocrine stress response.
+
+---
+
+### 7. Suggested Experiments
+
+#### Experiment 1 (Testing Hypothesis 1)
+* **Experiment idea:** Test how acute stress affects the timing of syntactic-semantic integration in the brain during a reading comprehension test.
+* **Control group:** Participants who read congruent and incongruent sentences in a quiet, low-stress room.
+* **Experimental group:** Participants who read the same sentences in a high-stress room (subjected to strict time limits and negative performance feedback to raise cortisol levels).
+* **Measurement method:** Use EEG to measure the timing of brain activation (the 400–600 ms window in the anterior inferior frontal gyrus) and collect saliva samples to measure cortisol levels.
+* **Expected result:** The experimental (high-stress) group will show a delayed or weaker brain activation signal at the 400–600 ms mark and make more comprehension errors, which will correlate with high cortisol levels.
+* **Limitation:** Laboratory-induced stress may not perfectly replicate real-world reading anxiety, and natural genetic variations in MR/GR receptors among participants might skew the results.
+
+#### Experiment 2 (Testing Hypothesis 2)
+* **Experiment idea:** Test if reading texts loaded with positive emotional words speeds up physiological recovery after a stressful event.
+* **Control group:** Participants who are stressed by a task and then read a text containing only neutral words.
+* **Experimental group:** Participants who are stressed by the same task and then read a text of equal difficulty loaded with positive emotional words.
+* **Measurement method:** Track heart rate variability (to measure parasympathetic recovery) and take saliva samples to measure how quickly cortisol levels drop back to normal.
+* **Expected result:** The experimental group reading positive words will show a significantly faster drop in cortisol levels and a quicker return to a normal heart rate compared to the control group.
+* **Limitation:** The emotional impact of specific words is subjective and can vary based on a participant's personal background and vocabulary skills.

@@ -1,0 +1,10 @@
+
+RESEARCH PAPER REPORT
+
+Title: Neuroscience Sample Paper
+
+Cleaned Text:
+the hippocampus is important for memory. neurons communicate through synapses. this paper studies brain activity.
+
+Total Words: 15
+Total Sentences: 3
