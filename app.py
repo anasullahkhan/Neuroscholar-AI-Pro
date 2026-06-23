@@ -390,7 +390,7 @@ def is_model_failure(text):
     return any(marker in text for marker in failure_markers)
 
 
-def generate_with_fallback(prompt, max_attempts=3):
+def generate_with_fallback(prompt, max_attempts=1):
     client = get_gemini_client()
 
     if client is None:
@@ -399,28 +399,32 @@ def generate_with_fallback(prompt, max_attempts=3):
             "Add GEMINI_API_KEY in Streamlit secrets."
         )
 
-    models_to_try = [
-        "gemini-2.5-flash-lite",
-        "gemini-flash-latest",
-        "gemini-2.5-flash"
-    ]
+    model_name = "gemini-2.5-flash-lite"
 
-    last_error = ""
+    try:
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt
+        )
+        return response.text
 
-    for model_name in models_to_try:
-        for attempt in range(1, max_attempts + 1):
-            try:
-                response = client.models.generate_content(
-                    model=model_name,
-                    contents=prompt
-                )
-                return response.text
+    except Exception as e:
+        error_text = str(e)
 
-            except Exception as e:
-                last_error = str(e)
-                time.sleep(4)
+        if "429" in error_text or "RESOURCE_EXHAUSTED" in error_text:
+            return (
+                "Gemini quota is exhausted right now. "
+                "The API key is valid, but the free request limit has been reached. "
+                "Try again later or contact the app owner for a full report."
+            )
 
-    return f"All Gemini models failed right now. Last error: {last_error}"
+        if "503" in error_text or "UNAVAILABLE" in error_text:
+            return (
+                "Gemini is temporarily overloaded. "
+                "Please try again after some time."
+            )
+
+        return f"Gemini API error: {error_text}"
 
 
 def extract_pdf_text(uploaded_file):
@@ -803,6 +807,10 @@ with tab1:
         type=["pdf"],
         accept_multiple_files=True
     )
+
+    if uploaded_files and len(uploaded_files) > 2:
+        st.error("Demo limit: upload maximum 2 PDFs. Contact the owner for full research reports.")
+        uploaded_files = uploaded_files[:2]
 
     col_a, col_b = st.columns([1, 2])
 
