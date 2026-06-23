@@ -3,3 +3,4 @@ pymupdf
 google-genai
 sentence-transformers
 scikit-learn
+torch
