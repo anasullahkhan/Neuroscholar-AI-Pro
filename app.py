@@ -860,7 +860,9 @@ with tab1:
                         continue
 
                     summary = summarize_paper(paper_name, cleaned)
-
+                    if is_model_failure(summary) or "quota is exhausted" in summary.lower():
+                        st.error(f"{paper_name}: Gemini failed while summarizing. Try again later or use fewer PDFs.")
+                        continue
                     paper_summaries[paper_name] = summary
 
                     knowledge_base += f"""
