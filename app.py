@@ -1,350 +1,176 @@
+
 import os
 import time
 
-import fitz  # PyMuPDF
+import fitz
 import streamlit as st
 from google import genai
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-# -----------------------------
-# Default app settings
-# -----------------------------
 
-top_k = 5
-chunk_size = 500
-overlap = 100
-
-
-# -----------------------------
-# App setup
-# -----------------------------
 
 st.set_page_config(
     page_title="NeuroScholar-AI Pro",
     page_icon="🧠",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
 )
 
+DEFAULT_TOP_K = 5
+DEFAULT_CHUNK_SIZE = 500
+DEFAULT_OVERLAP = 100
+DEMO_MAX_PDFS = 2
+MAX_TEXT_FOR_SUMMARY = 12000
+FALLBACK_PREVIEW_CHARS = 3000
 
-# -----------------------------
-# Custom UI styling
-# -----------------------------
 
 st.markdown(
     """
 <style>
-    /* App background */
-    [data-testid="stAppViewContainer"] {
-        background:
-            radial-gradient(circle at top left, rgba(124, 58, 237, 0.25), transparent 35%),
-            radial-gradient(circle at top right, rgba(14, 165, 233, 0.22), transparent 35%),
-            linear-gradient(135deg, #07111f 0%, #0f172a 45%, #111827 100%);
-        color: #e5e7eb;
-    }
-
-    [data-testid="stHeader"] {
-        background: rgba(7, 17, 31, 0.0);
-    }
-
-    /* Sidebar */
-    [data-testid="stSidebar"] {
-        background:
-            linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(17, 24, 39, 0.98));
-        border-right: 1px solid rgba(148, 163, 184, 0.18);
-    }
-
-    [data-testid="stSidebar"] * {
-        color: #e5e7eb;
-    }
-
-    /* Main block width */
-    .block-container {
-        padding-top: 2rem;
-        padding-bottom: 3rem;
-    }
-
-    /* Hero */
-    .hero-card {
-        padding: 2.2rem 2.4rem;
-        border-radius: 28px;
-        background:
-            linear-gradient(135deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.78)),
-            linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(14, 165, 233, 0.20));
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.38);
-        margin-bottom: 1.25rem;
-    }
-
-    .hero-title {
-        font-size: 3.2rem;
-        font-weight: 900;
-        letter-spacing: -0.05em;
-        margin: 0;
-        line-height: 1.05;
-        background: linear-gradient(90deg, #e0f2fe, #c4b5fd, #93c5fd);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .hero-subtitle {
-        font-size: 1.08rem;
-        color: #cbd5e1;
-        margin-top: 0.8rem;
-        max-width: 980px;
-        line-height: 1.65;
-    }
-
-    .badge-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.65rem;
-        margin-top: 1.2rem;
-    }
-
-    .badge {
-        padding: 0.42rem 0.78rem;
-        border-radius: 999px;
-        background: rgba(15, 23, 42, 0.78);
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        color: #dbeafe;
-        font-size: 0.88rem;
-        font-weight: 700;
-    }
-
-    /* Cards */
-    .metric-card {
-        padding: 1.15rem 1.2rem;
-        border-radius: 22px;
-        background: rgba(15, 23, 42, 0.72);
-        border: 1px solid rgba(148, 163, 184, 0.18);
-        box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-        min-height: 118px;
-    }
-
-    .metric-title {
-        color: #94a3b8;
-        font-size: 0.86rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 0.45rem;
-    }
-
-    .metric-value {
-        color: #f8fafc;
-        font-size: 1.55rem;
-        font-weight: 900;
-        margin-bottom: 0.25rem;
-    }
-
-    .metric-text {
-        color: #cbd5e1;
-        font-size: 0.93rem;
-        line-height: 1.5;
-    }
-
-    .section-card {
-        padding: 1.2rem 1.35rem;
-        border-radius: 24px;
-        background: rgba(15, 23, 42, 0.70);
-        border: 1px solid rgba(148, 163, 184, 0.16);
-        box-shadow: 0 16px 50px rgba(0,0,0,0.22);
-        margin-bottom: 1rem;
-    }
-
-    .section-title {
-        font-size: 1.35rem;
-        font-weight: 900;
-        color: #f8fafc;
-        margin-bottom: 0.25rem;
-    }
-
-    .section-subtitle {
-        color: #cbd5e1;
-        font-size: 0.95rem;
-        margin-bottom: 0.7rem;
-        line-height: 1.55;
-    }
-
-    .soft-warning {
-        padding: 0.85rem 1rem;
-        border-radius: 18px;
-        border: 1px solid rgba(251, 191, 36, 0.35);
-        background: rgba(120, 53, 15, 0.30);
-        color: #fde68a;
-        font-size: 0.95rem;
-        margin: 0.8rem 0;
-    }
-
-    .success-box {
-        padding: 0.9rem 1rem;
-        border-radius: 18px;
-        border: 1px solid rgba(34, 197, 94, 0.35);
-        background: rgba(20, 83, 45, 0.28);
-        color: #bbf7d0;
-        font-size: 0.95rem;
-        margin: 0.8rem 0;
-    }
-
-    .answer-box {
-        padding: 1.15rem 1.25rem;
-        border-radius: 22px;
-        background: rgba(2, 6, 23, 0.64);
-        border: 1px solid rgba(96, 165, 250, 0.26);
-        box-shadow: 0 20px 50px rgba(0,0,0,0.28);
-        margin-top: 1rem;
-    }
-
-    .chip {
-        display: inline-block;
-        padding: 0.45rem 0.7rem;
-        margin: 0.2rem 0.2rem 0.2rem 0;
-        border-radius: 999px;
-        background: rgba(30, 41, 59, 0.85);
-        border: 1px solid rgba(148, 163, 184, 0.20);
-        color: #bfdbfe;
-        font-size: 0.86rem;
-        font-weight: 700;
-    }
-
-    /* Tabs */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 0.55rem;
-        background: rgba(15, 23, 42, 0.55);
-        padding: 0.55rem;
-        border-radius: 20px;
-        border: 1px solid rgba(148, 163, 184, 0.15);
-    }
-
-    .stTabs [data-baseweb="tab"] {
-        border-radius: 16px;
-        padding: 0.7rem 1rem;
-        color: #cbd5e1;
-        font-weight: 800;
-    }
-
-    .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, rgba(124, 58, 237, 0.75), rgba(14, 165, 233, 0.60));
-        color: #ffffff !important;
-    }
-
-    /* Inputs */
-    textarea, input {
-        border-radius: 16px !important;
-    }
-
-    /* Buttons */
-    div.stButton > button {
-        border-radius: 16px;
-        padding: 0.72rem 1.05rem;
-        font-weight: 900;
-        border: 1px solid rgba(147, 197, 253, 0.28);
-        background: linear-gradient(135deg, #7c3aed, #0ea5e9);
-        color: white;
-        box-shadow: 0 14px 30px rgba(14, 165, 233, 0.18);
-        transition: transform 0.12s ease, box-shadow 0.12s ease;
-    }
-
-    div.stButton > button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 18px 38px rgba(124, 58, 237, 0.28);
-        border: 1px solid rgba(255,255,255,0.32);
-        color: white;
-    }
-
-    /* Download button */
-    div.stDownloadButton > button {
-        border-radius: 16px;
-        padding: 0.72rem 1.05rem;
-        font-weight: 900;
-        border: 1px solid rgba(34, 197, 94, 0.28);
-        background: linear-gradient(135deg, #16a34a, #0ea5e9);
-        color: white;
-    }
-
-    /* Expander */
-    .streamlit-expanderHeader {
-        border-radius: 14px;
-        font-weight: 800;
-    }
-
-    /* Hide Streamlit footer/menu a bit */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+[data-testid="stAppViewContainer"] {
+    background:
+        radial-gradient(circle at top left, rgba(124,58,237,.25), transparent 35%),
+        radial-gradient(circle at top right, rgba(14,165,233,.22), transparent 35%),
+        linear-gradient(135deg, #07111f 0%, #0f172a 45%, #111827 100%);
+    color: #e5e7eb;
+}
+[data-testid="stHeader"] { background: rgba(7,17,31,0); }
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, rgba(15,23,42,.98), rgba(17,24,39,.98));
+    border-right: 1px solid rgba(148,163,184,.18);
+}
+[data-testid="stSidebar"] * { color: #e5e7eb; }
+.block-container { padding-top: 2rem; padding-bottom: 3rem; }
+.hero-card {
+    padding: 2.2rem 2.4rem;
+    border-radius: 28px;
+    background:
+        linear-gradient(135deg, rgba(30,41,59,.92), rgba(15,23,42,.78)),
+        linear-gradient(135deg, rgba(124,58,237,.35), rgba(14,165,233,.20));
+    border: 1px solid rgba(148,163,184,.25);
+    box-shadow: 0 30px 90px rgba(0,0,0,.38);
+    margin-bottom: 1.25rem;
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -.05em;
+    margin: 0;
+    line-height: 1.05;
+    background: linear-gradient(90deg, #e0f2fe, #c4b5fd, #93c5fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    margin-top: .8rem;
+    max-width: 980px;
+    line-height: 1.65;
+}
+.badge-row { display:flex; flex-wrap:wrap; gap:.65rem; margin-top:1.2rem; }
+.badge {
+    padding: .42rem .78rem;
+    border-radius: 999px;
+    background: rgba(15,23,42,.78);
+    border: 1px solid rgba(148,163,184,.25);
+    color: #dbeafe;
+    font-size: .88rem;
+    font-weight: 700;
+}
+.metric-card, .section-card, .answer-box {
+    border-radius: 22px;
+    background: rgba(15,23,42,.72);
+    border: 1px solid rgba(148,163,184,.18);
+    box-shadow: 0 18px 45px rgba(0,0,0,.25);
+}
+.metric-card { padding: 1.15rem 1.2rem; min-height: 118px; }
+.section-card { padding: 1.2rem 1.35rem; margin-bottom: 1rem; }
+.answer-box { padding: 1.15rem 1.25rem; margin-top: 1rem; background: rgba(2,6,23,.64); border-color: rgba(96,165,250,.26); }
+.metric-title { color:#94a3b8; font-size:.86rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.45rem; }
+.metric-value { color:#f8fafc; font-size:1.45rem; font-weight:900; margin-bottom:.25rem; }
+.metric-text, .section-subtitle { color:#cbd5e1; font-size:.95rem; line-height:1.55; }
+.section-title { font-size:1.35rem; font-weight:900; color:#f8fafc; margin-bottom:.25rem; }
+.chip {
+    display:inline-block;
+    padding:.45rem .7rem;
+    margin:.2rem;
+    border-radius:999px;
+    background:rgba(30,41,59,.85);
+    border:1px solid rgba(148,163,184,.20);
+    color:#bfdbfe;
+    font-size:.86rem;
+    font-weight:700;
+}
+.stTabs [data-baseweb="tab-list"] {
+    gap:.55rem;
+    background:rgba(15,23,42,.55);
+    padding:.55rem;
+    border-radius:20px;
+    border:1px solid rgba(148,163,184,.15);
+}
+.stTabs [data-baseweb="tab"] { border-radius:16px; padding:.7rem 1rem; color:#cbd5e1; font-weight:800; }
+.stTabs [aria-selected="true"] {
+    background:linear-gradient(135deg, rgba(124,58,237,.75), rgba(14,165,233,.60));
+    color:#fff !important;
+}
+textarea, input { border-radius: 16px !important; }
+div.stButton > button, div.stDownloadButton > button {
+    border-radius:16px;
+    padding:.72rem 1.05rem;
+    font-weight:900;
+    border:1px solid rgba(147,197,253,.28);
+    background:linear-gradient(135deg, #7c3aed, #0ea5e9);
+    color:white;
+    box-shadow:0 14px 30px rgba(14,165,233,.18);
+}
+#MainMenu {visibility:hidden;} footer {visibility:hidden;}
 </style>
 """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 
-# -----------------------------
-# Hero UI
-# -----------------------------
+with st.sidebar:
+    st.header("⚙️ Settings")
+    top_k = st.slider("Source chunks for Q&A", 3, 10, DEFAULT_TOP_K)
+    chunk_size = st.slider("Chunk size", 300, 1000, DEFAULT_CHUNK_SIZE, step=100)
+    overlap = st.slider("Chunk overlap", 50, 250, DEFAULT_OVERLAP, step=50)
+    st.markdown("---")
+    st.caption("Demo mode: max 2 PDFs. Add paid quota for real production usage.")
+
 
 st.markdown(
     """
 <div class="hero-card">
     <div class="hero-title">NeuroScholar-AI Pro</div>
     <div class="hero-subtitle">
-        Upload scientific papers and ask anything. The app reads PDFs, builds a knowledge base,
-        retrieves relevant source chunks, and helps generate summaries, comparisons, research gaps,
-        hypotheses, experiment ideas, and final reports.
+        Upload scientific papers and ask anything. The app extracts PDF text, builds a searchable
+        knowledge base, retrieves source chunks, and helps generate summaries, research gaps,
+        possible hypotheses, experiment ideas, and final reports.
     </div>
     <div class="badge-row">
         <span class="badge">📄 Multi-PDF Analysis</span>
         <span class="badge">🔎 Semantic Search</span>
         <span class="badge">🧠 Gemini RAG</span>
-        <span class="badge">🔬 Research Gap Detection</span>
+        <span class="badge">🔬 Research Gaps</span>
         <span class="badge">🧪 Experiment Planning</span>
     </div>
 </div>
 """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
-metric_col1, metric_col2, metric_col3 = st.columns(3)
+c1, c2, c3 = st.columns(3)
+with c1:
+    st.markdown('<div class="metric-card"><div class="metric-title">Pipeline</div><div class="metric-value">PDF → RAG → Report</div><div class="metric-text">Extract, chunk, embed, retrieve, reason, export.</div></div>', unsafe_allow_html=True)
+with c2:
+    st.markdown('<div class="metric-card"><div class="metric-title">Ask Mode</div><div class="metric-value">Any Prompt</div><div class="metric-text">Summary, tables, gaps, methods, limitations, experiments.</div></div>', unsafe_allow_html=True)
+with c3:
+    st.markdown('<div class="metric-card"><div class="metric-title">Safety</div><div class="metric-value">Cautious Science</div><div class="metric-text">Suggests possible ideas, not fake proven discoveries.</div></div>', unsafe_allow_html=True)
 
-with metric_col1:
-    st.markdown(
-        """
-<div class="metric-card">
-    <div class="metric-title">Pipeline</div>
-    <div class="metric-value">PDF → RAG → Report</div>
-    <div class="metric-text">Extract, chunk, embed, retrieve, reason, and export.</div>
-</div>
-""",
-        unsafe_allow_html=True
-    )
+st.info("Demo version: upload up to 2 papers. For full literature review reports with 5–10 papers, contact the owner.")
 
-with metric_col2:
-    st.markdown(
-        """
-<div class="metric-card">
-    <div class="metric-title">Ask Mode</div>
-    <div class="metric-value">Any Prompt</div>
-    <div class="metric-text">Summary, tables, gaps, methods, limitations, or experiments.</div>
-</div>
-""",
-        unsafe_allow_html=True
-    )
-
-with metric_col3:
-    st.markdown(
-        """
-<div class="metric-card">
-    <div class="metric-title">Safety</div>
-    <div class="metric-value">Cautious Science</div>
-    <div class="metric-text">Suggests possible ideas, not fake proven discoveries.</div>
-</div>
-""",
-        unsafe_allow_html=True
-    )
-
-
-# -----------------------------
-# Helper functions
-# -----------------------------
 
 @st.cache_resource
 def load_embedding_model():
@@ -352,27 +178,19 @@ def load_embedding_model():
 
 
 def get_api_key():
-    """Use Streamlit secrets in deployment, or an environment variable locally."""
     try:
-        key = st.secrets["GEMINI_API_KEY"]
+        key = st.secrets.get("GEMINI_API_KEY", None)
         if key:
             return key
     except Exception:
         pass
-
-    env_key = os.getenv("GEMINI_API_KEY")
-    if env_key:
-        return env_key
-
-    return None
+    return os.getenv("GEMINI_API_KEY")
 
 
 def get_gemini_client():
     api_key = get_api_key()
-
-    if api_key is None:
+    if not api_key:
         return None
-
     return genai.Client(api_key=api_key)
 
 
@@ -380,49 +198,43 @@ def is_model_failure(text):
     if not isinstance(text, str):
         return False
 
-    failure_markers = [
-        "All Gemini models failed",
-        "503 UNAVAILABLE",
-        "Gemini API key is not configured",
-        "Error: Gemini API key"
+    t = text.lower()
+    markers = [
+        "all gemini models failed",
+        "503 unavailable",
+        "429 resource_exhausted",
+        "resource_exhausted",
+        "quota is exhausted",
+        "quota exceeded",
+        "free request limit",
+        "temporarily overloaded",
+        "try again after some time",
+        "gemini api error",
+        "api key is not configured",
+        "error: gemini api key",
     ]
+    return any(m in t for m in markers)
 
-    return any(marker in text for marker in failure_markers)
 
-
-def generate_with_fallback(prompt, max_attempts=1):
+def generate_with_fallback(prompt):
     client = get_gemini_client()
-
     if client is None:
-        return (
-            "Error: Gemini API key is not configured. "
-            "Add GEMINI_API_KEY in Streamlit secrets."
-        )
+        return "Error: Gemini API key is not configured. Add GEMINI_API_KEY in Streamlit Cloud Secrets."
 
     model_name = "gemini-2.5-flash-lite"
 
     try:
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt
-        )
-        return response.text
-
+        response = client.models.generate_content(model=model_name, contents=prompt)
+        return response.text or "Gemini returned an empty response."
     except Exception as e:
         error_text = str(e)
+        error_lower = error_text.lower()
 
-        if "429" in error_text or "RESOURCE_EXHAUSTED" in error_text:
-            return (
-                "Gemini quota is exhausted right now. "
-                "The API key is valid, but the free request limit has been reached. "
-                "Try again later or contact the app owner for a full report."
-            )
+        if "429" in error_text or "resource_exhausted" in error_lower or "quota" in error_lower:
+            return "Gemini quota is exhausted right now. The API key is valid, but the free request limit has been reached. Try again later or contact the app owner for a full report."
 
-        if "503" in error_text or "UNAVAILABLE" in error_text:
-            return (
-                "Gemini is temporarily overloaded. "
-                "Please try again after some time."
-            )
+        if "503" in error_text or "unavailable" in error_lower or "overloaded" in error_lower:
+            return "Gemini is temporarily overloaded. Please try again after some time."
 
         return f"Gemini API error: {error_text}"
 
@@ -431,17 +243,14 @@ def extract_pdf_text(uploaded_file):
     try:
         file_bytes = uploaded_file.getvalue()
         doc = fitz.open(stream=file_bytes, filetype="pdf")
-
         text = ""
 
         for page_number, page in enumerate(doc, start=1):
             page_text = page.get_text()
-            text += f"\n\n--- Page {page_number} ---\n\n"
-            text += page_text
+            text += f"\n\n--- Page {page_number} ---\n\n{page_text}"
 
         doc.close()
         return text
-
     except Exception as e:
         return f"PDF_EXTRACTION_ERROR: {e}"
 
@@ -453,37 +262,55 @@ def clean_text(text):
     return text.strip()
 
 
-def shorten_text(text, max_chars=18000):
-    if len(text) > max_chars:
-        return text[:max_chars]
-    return text
+def shorten_text(text, max_chars=MAX_TEXT_FOR_SUMMARY):
+    return text[:max_chars] if len(text) > max_chars else text
 
 
-def split_into_chunks(text, paper_name, chunk_size=500, overlap=100):
+def split_into_chunks(text, paper_name, chunk_size_value=DEFAULT_CHUNK_SIZE, overlap_value=DEFAULT_OVERLAP):
     words = text.split()
     chunks = []
+
+    if not words:
+        return chunks
+
+    if overlap_value >= chunk_size_value:
+        overlap_value = DEFAULT_OVERLAP
+
     start = 0
     chunk_id = 1
 
-    if overlap >= chunk_size:
-        overlap = 100
-
     while start < len(words):
-        end = start + chunk_size
-        chunk_words = words[start:end]
-        chunk_text = " ".join(chunk_words)
+        end = start + chunk_size_value
+        chunk_text = " ".join(words[start:end]).strip()
 
-        if chunk_text.strip():
-            chunks.append({
-                "paper_name": paper_name,
-                "chunk_id": chunk_id,
-                "text": chunk_text
-            })
+        if chunk_text:
+            chunks.append({"paper_name": paper_name, "chunk_id": chunk_id, "text": chunk_text})
 
         chunk_id += 1
-        start = end - overlap
+        next_start = end - overlap_value
+
+        if next_start <= start:
+            break
+
+        start = next_start
 
     return chunks
+
+
+def fallback_summary(cleaned_text, reason):
+    preview = cleaned_text[:FALLBACK_PREVIEW_CHARS]
+    return f"""
+Gemini summary unavailable.
+
+Reason:
+{reason}
+
+Fallback paper preview from extracted PDF text:
+{preview}
+
+Note:
+The PDF text was extracted successfully. Searchable chunks were created, so the paper can still be used for retrieval after Gemini becomes available again.
+"""
 
 
 def summarize_paper(paper_name, paper_text):
@@ -495,7 +322,6 @@ You are NeuroScholar-AI Pro, a scientific paper analysis assistant.
 Analyze the research paper text below.
 
 Extract:
-
 1. Paper name
 2. Main research problem
 3. Field / topic area
@@ -522,69 +348,50 @@ Paper file name:
 Paper text:
 {paper_text}
 """
-
     return generate_with_fallback(prompt)
 
 
 def build_embeddings(chunks):
+    if not chunks:
+        return None
     model = load_embedding_model()
-    chunk_texts = [chunk["text"] for chunk in chunks]
-    embeddings = model.encode(chunk_texts)
-    return embeddings
+    return model.encode([chunk["text"] for chunk in chunks])
 
 
-def retrieve_relevant_chunks(question, chunks, embeddings, top_k=5):
-    if embeddings is None or len(chunks) == 0:
+def retrieve_relevant_chunks(question, chunks, embeddings, top_k_value=DEFAULT_TOP_K):
+    if embeddings is None or not chunks:
         return []
 
     model = load_embedding_model()
     question_embedding = model.encode([question])
-
     similarities = cosine_similarity(question_embedding, embeddings)[0]
 
-    ranked = sorted(
-        enumerate(similarities),
-        key=lambda x: x[1],
-        reverse=True
-    )
+    ranked = sorted(enumerate(similarities), key=lambda x: x[1], reverse=True)
 
     results = []
-
-    for index, score in ranked[:top_k]:
-        results.append({
-            "paper_name": chunks[index]["paper_name"],
-            "chunk_id": chunks[index]["chunk_id"],
-            "text": chunks[index]["text"],
-            "score": float(score)
-        })
-
+    for index, score in ranked[:top_k_value]:
+        results.append(
+            {
+                "paper_name": chunks[index]["paper_name"],
+                "chunk_id": chunks[index]["chunk_id"],
+                "text": chunks[index]["text"],
+                "score": float(score),
+            }
+        )
     return results
 
 
-def format_relevant_chunks_for_prompt(relevant_chunks):
+def format_relevant_chunks(relevant_chunks):
     context = ""
-
     for chunk in relevant_chunks:
-        context += (
-            f"\nSource: {chunk['paper_name']} | "
-            f"Chunk {chunk['chunk_id']} | "
-            f"Score {chunk['score']:.4f}\n"
-        )
-        context += chunk["text"]
-        context += "\n\n"
-
+        context += f"\nSource: {chunk['paper_name']} | Chunk {chunk['chunk_id']} | Score {chunk['score']:.4f}\n"
+        context += chunk["text"] + "\n\n"
     return context
 
 
-def answer_any_prompt(question, knowledge_base, chunks, embeddings, top_k=5):
-    relevant_chunks = retrieve_relevant_chunks(
-        question=question,
-        chunks=chunks,
-        embeddings=embeddings,
-        top_k=top_k
-    )
-
-    relevant_context = format_relevant_chunks_for_prompt(relevant_chunks)
+def answer_any_prompt(question, knowledge_base, chunks, embeddings, top_k_value=DEFAULT_TOP_K):
+    relevant_chunks = retrieve_relevant_chunks(question, chunks, embeddings, top_k_value)
+    relevant_context = format_relevant_chunks(relevant_chunks)
 
     prompt = f"""
 You are NeuroScholar-AI Pro, a scientific research assistant.
@@ -599,14 +406,13 @@ Your job:
 - Answer broad questions using the paper knowledge base.
 - Answer specific questions using the relevant source chunks.
 - If the user asks for a summary, summarize clearly.
-- If the user asks "what did the paper say", explain the paper in simple English.
 - If the user asks for a table, create a table.
 - If the user asks for research gaps, identify possible gaps.
 - If the user asks for hypotheses, generate possible hypotheses.
 - If the user asks for experiments, suggest possible experiments.
 - If the user asks for limitations, list limitations.
 - If the user asks for methods, explain methods.
-- If the user uses angry/casual language, ignore the tone and answer professionally.
+- Ignore angry/casual tone and answer professionally.
 - Do not say "not enough information" unless the knowledge base and chunks are both useless.
 - Do not invent unsupported scientific claims.
 - Use simple English.
@@ -623,18 +429,16 @@ Most relevant source chunks:
 
 Final answer:
 """
-
     answer = generate_with_fallback(prompt)
 
     if is_model_failure(answer):
         fallback_text = (
-            "Gemini is temporarily overloaded, so I cannot generate a fresh answer right now.\n\n"
-            "But your paper knowledge base is already built. Here is the available context:\n\n"
+            "Gemini cannot generate a fresh answer right now because quota is exhausted or the service is overloaded.\n\n"
+            "Here is the available knowledge base preview:\n\n"
             f"{knowledge_base[:5000]}"
         )
         if len(knowledge_base) > 5000:
             fallback_text += "\n\n[Preview shortened. Full report is available in Export.]"
-
         return fallback_text, relevant_chunks
 
     return answer, relevant_chunks
@@ -644,53 +448,16 @@ def generate_cross_paper_ideas(knowledge_base):
     prompt = f"""
 You are NeuroScholar-AI Pro, an advanced neuroscience research assistant.
 
-You are given a knowledge base created from multiple scientific papers.
-
-Generate cross-paper research insights.
+Generate cross-paper research insights from this knowledge base.
 
 Output:
-
 1. Big Picture Summary
-
 2. Cross-Paper Connections
-
 3. Research Gaps
-For each gap:
-- Gap title
-- What is missing?
-- Which papers suggest this gap?
-- Why the gap matters
-
 4. Possible Hypotheses
-For each hypothesis:
-- Hypothesis
-- Why it is possible
-- Evidence from papers
-- What is still uncertain
-
 5. Possible Experiments
-For each experiment:
-- Experiment title
-- Research question
-- Control group
-- Experimental group
-- Measurement method
-- Expected result
-- Limitations
-- Ethical concerns
-
-6. Novel Research Ideas
-For each idea:
-- Idea title
-- Scientific reasoning
-- Novelty: High / Medium / Low
-- Feasibility: High / Medium / Low
-- Impact: High / Medium / Low
-- Evidence strength: Strong / Moderate / Weak
-- Overall priority: High / Medium / Low
-
-7. Final Recommendation
-List the top 3 research directions to pursue first.
+6. Novel Research Ideas with Novelty/Feasibility/Impact/Evidence/Priority
+7. Final Recommendation: top 3 research directions
 
 Rules:
 - Do not claim proven discoveries.
@@ -703,7 +470,6 @@ Rules:
 Knowledge base:
 {knowledge_base}
 """
-
     return generate_with_fallback(prompt)
 
 
@@ -711,12 +477,9 @@ def generate_experiment_plan(research_ideas):
     prompt = f"""
 You are NeuroScholar-AI Pro, a neuroscience experiment design assistant.
 
-You are given research gaps, hypotheses, and ideas generated from multiple scientific papers.
-
 Convert the strongest ideas into detailed experiment designs.
 
 For each experiment, provide:
-
 1. Experiment title
 2. Research question
 3. Hypothesis being tested
@@ -738,55 +501,40 @@ Rules:
 - Do not claim the hypothesis is proven.
 - Use simple English.
 - Be scientifically cautious.
-- If human drug experiments are risky, suggest safer alternatives such as observational studies, animal models, or non-invasive measurement.
+- Suggest safer alternatives for risky human drug experiments.
 - Do not invent unsupported paper details.
 
 Research ideas:
 {research_ideas}
 """
-
     return generate_with_fallback(prompt)
 
 
-# -----------------------------
-# Session state
-# -----------------------------
-
-if "paper_summaries" not in st.session_state:
+def reset_state():
     st.session_state.paper_summaries = {}
-
-if "knowledge_base" not in st.session_state:
     st.session_state.knowledge_base = ""
-
-if "chunks" not in st.session_state:
     st.session_state.chunks = []
-
-if "embeddings" not in st.session_state:
     st.session_state.embeddings = None
-
-if "cross_paper_ideas" not in st.session_state:
     st.session_state.cross_paper_ideas = ""
-
-if "experiment_plan" not in st.session_state:
     st.session_state.experiment_plan = ""
 
 
-# -----------------------------
-# Tabs
-# -----------------------------
+for key, default_value in {
+    "paper_summaries": {},
+    "knowledge_base": "",
+    "chunks": [],
+    "embeddings": None,
+    "cross_paper_ideas": "",
+    "experiment_plan": "",
+}.items():
+    if key not in st.session_state:
+        st.session_state[key] = default_value
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📄 Upload Papers",
-    "✨ Ask Anything",
-    "🔬 Research Gaps & Ideas",
-    "🧪 Experiments",
-    "📥 Export"
-])
 
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    ["📄 Upload Papers", "✨ Ask Anything", "🔬 Research Gaps & Ideas", "🧪 Experiments", "📥 Export"]
+)
 
-# -----------------------------
-# Tab 1: Upload papers
-# -----------------------------
 
 with tab1:
     st.markdown(
@@ -794,53 +542,40 @@ with tab1:
 <div class="section-card">
     <div class="section-title">📄 Upload Scientific Papers</div>
     <div class="section-subtitle">
-        Upload one or more PDF papers. NeuroScholar will extract text, summarize each paper,
-        create source chunks, and build semantic embeddings.
+        Upload PDF papers. If Gemini fails, the app still extracts text, creates chunks, builds embeddings,
+        and keeps a fallback preview instead of saving ugly error text as the summary.
     </div>
 </div>
 """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
-    uploaded_files = st.file_uploader(
-        "Upload multiple PDF papers",
-        type=["pdf"],
-        accept_multiple_files=True
-    )
+    if st.button("🧹 Clear Current Session"):
+        reset_state()
+        st.success("Session cleared. Upload PDFs again.")
 
-    if uploaded_files and len(uploaded_files) > 2:
-        st.error("Demo limit: upload maximum 2 PDFs. Contact the owner for full research reports.")
-        uploaded_files = uploaded_files[:2]
+    uploaded_files = st.file_uploader("Upload PDF papers", type=["pdf"], accept_multiple_files=True)
 
-    col_a, col_b = st.columns([1, 2])
+    if uploaded_files and len(uploaded_files) > DEMO_MAX_PDFS:
+        st.warning(f"Demo limit: only the first {DEMO_MAX_PDFS} PDFs will be processed.")
+        uploaded_files = uploaded_files[:DEMO_MAX_PDFS]
 
-    with col_a:
+    left, right = st.columns([1, 2])
+    with left:
         build_clicked = st.button("🚀 Build Knowledge Base")
-
-    with col_b:
+    with right:
         if uploaded_files:
-            st.markdown(
-                f"<div class='success-box'>✅ {len(uploaded_files)} PDF file(s) selected.</div>",
-                unsafe_allow_html=True
-            )
+            st.success(f"{len(uploaded_files)} PDF file(s) selected.")
         else:
-            st.markdown(
-                "<div class='soft-warning'>Upload PDFs first, then build the knowledge base.</div>",
-                unsafe_allow_html=True
-            )
+            st.warning("Upload PDFs first, then build the knowledge base.")
 
     if build_clicked:
-        if get_api_key() is None:
-            st.error("Gemini API key is not configured. Add GEMINI_API_KEY in Streamlit secrets.")
-
-        elif not uploaded_files:
+        if not uploaded_files:
             st.error("Upload at least one PDF.")
-
         else:
             all_chunks = []
             knowledge_base = ""
             paper_summaries = {}
-
             progress = st.progress(0)
 
             for i, uploaded_file in enumerate(uploaded_files):
@@ -851,18 +586,36 @@ with tab1:
 
                     if raw_text.startswith("PDF_EXTRACTION_ERROR"):
                         st.error(f"{paper_name}: {raw_text}")
+                        progress.progress((i + 1) / len(uploaded_files))
                         continue
 
                     cleaned = clean_text(raw_text)
 
-                    if cleaned.strip() == "":
+                    if not cleaned:
                         st.warning(f"No readable text found in {paper_name}. Skipping.")
+                        progress.progress((i + 1) / len(uploaded_files))
                         continue
 
-                    summary = summarize_paper(paper_name, cleaned)
-                    if is_model_failure(summary) or "quota is exhausted" in summary.lower():
-                        st.error(f"{paper_name}: Gemini failed while summarizing. Try again later or use fewer PDFs.")
+                    paper_chunks = split_into_chunks(
+                        text=cleaned,
+                        paper_name=paper_name,
+                        chunk_size_value=chunk_size,
+                        overlap_value=overlap,
+                    )
+
+                    if not paper_chunks:
+                        st.warning(f"No chunks created for {paper_name}.")
+                        progress.progress((i + 1) / len(uploaded_files))
                         continue
+
+                    all_chunks.extend(paper_chunks)
+
+                    summary = summarize_paper(paper_name, cleaned)
+
+                    if is_model_failure(summary):
+                        st.warning(f"{paper_name}: Gemini summary failed, but chunks were created successfully.")
+                        summary = fallback_summary(cleaned, summary)
+
                     paper_summaries[paper_name] = summary
 
                     knowledge_base += f"""
@@ -874,20 +627,10 @@ PAPER: {paper_name}
 
 """
 
-                    paper_chunks = split_into_chunks(
-                        cleaned,
-                        paper_name=paper_name,
-                        chunk_size=chunk_size,
-                        overlap=overlap
-                    )
-
-                    all_chunks.extend(paper_chunks)
-
                 progress.progress((i + 1) / len(uploaded_files))
 
-            if len(all_chunks) == 0:
-                st.error("No chunks were created. Check your PDFs.")
-
+            if not all_chunks:
+                st.error("No chunks were created. Check whether your PDFs contain selectable text.")
             else:
                 with st.spinner("Creating embeddings for all paper chunks..."):
                     embeddings = build_embeddings(all_chunks)
@@ -900,56 +643,18 @@ PAPER: {paper_name}
                 st.success("Knowledge base created successfully.")
 
     if st.session_state.knowledge_base:
-        stat1, stat2, stat3 = st.columns(3)
-
-        with stat1:
-            st.markdown(
-                f"""
-<div class="metric-card">
-    <div class="metric-title">Papers</div>
-    <div class="metric-value">{len(st.session_state.paper_summaries)}</div>
-    <div class="metric-text">Analyzed documents</div>
-</div>
-""",
-                unsafe_allow_html=True
-            )
-
-        with stat2:
-            st.markdown(
-                f"""
-<div class="metric-card">
-    <div class="metric-title">Chunks</div>
-    <div class="metric-value">{len(st.session_state.chunks)}</div>
-    <div class="metric-text">Searchable source units</div>
-</div>
-""",
-                unsafe_allow_html=True
-            )
-
-        with stat3:
+        s1, s2, s3 = st.columns(3)
+        with s1:
+            st.markdown(f'<div class="metric-card"><div class="metric-title">Papers</div><div class="metric-value">{len(st.session_state.paper_summaries)}</div><div class="metric-text">Analyzed documents</div></div>', unsafe_allow_html=True)
+        with s2:
+            st.markdown(f'<div class="metric-card"><div class="metric-title">Chunks</div><div class="metric-value">{len(st.session_state.chunks)}</div><div class="metric-text">Searchable source units</div></div>', unsafe_allow_html=True)
+        with s3:
             kb_words = len(st.session_state.knowledge_base.split())
-            st.markdown(
-                f"""
-<div class="metric-card">
-    <div class="metric-title">Knowledge Base</div>
-    <div class="metric-value">{kb_words}</div>
-    <div class="metric-text">Approximate words generated</div>
-</div>
-""",
-                unsafe_allow_html=True
-            )
+            st.markdown(f'<div class="metric-card"><div class="metric-title">Knowledge Base</div><div class="metric-value">{kb_words}</div><div class="metric-text">Approximate words generated</div></div>', unsafe_allow_html=True)
 
         st.subheader("Paper Knowledge Base Preview")
-        st.text_area(
-            "Knowledge Base",
-            st.session_state.knowledge_base,
-            height=400
-        )
+        st.text_area("Knowledge Base", st.session_state.knowledge_base, height=400)
 
-
-# -----------------------------
-# Tab 2: Ask anything
-# -----------------------------
 
 with tab2:
     st.markdown(
@@ -957,8 +662,8 @@ with tab2:
 <div class="section-card">
     <div class="section-title">✨ Ask Anything About Uploaded Papers</div>
     <div class="section-subtitle">
-        Ask naturally. Summary, table, gaps, hypotheses, methods, limitations, experiments, or simple explanation.
-        The app uses the full paper knowledge base plus the most relevant source chunks.
+        Ask naturally. Summary, table, gaps, hypotheses, methods, limitations, experiments,
+        or simple explanation. The app uses the full paper knowledge base plus relevant chunks.
     </div>
     <span class="chip">what did the paper say?</span>
     <span class="chip">explain like I am 10</span>
@@ -967,24 +672,20 @@ with tab2:
     <span class="chip">suggest experiments</span>
 </div>
 """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
     question = st.text_area(
         "Enter any prompt",
-        placeholder="Example: Explain the paper in simple English and give 5 key takeaways.",
-        height=135
+        placeholder="Example: Explain the uploaded papers in simple English and give 5 key takeaways.",
+        height=135,
     )
 
-    answer_clicked = st.button("🧠 Generate Answer")
-
-    if answer_clicked:
-        if st.session_state.knowledge_base.strip() == "":
+    if st.button("🧠 Generate Answer"):
+        if not st.session_state.knowledge_base.strip():
             st.error("Build the knowledge base first in the Upload Papers tab.")
-
-        elif question.strip() == "":
+        elif not question.strip():
             st.error("Type a prompt first.")
-
         else:
             with st.spinner("Thinking across the full knowledge base and source chunks..."):
                 answer, relevant_chunks = answer_any_prompt(
@@ -992,7 +693,7 @@ with tab2:
                     knowledge_base=st.session_state.knowledge_base,
                     chunks=st.session_state.chunks,
                     embeddings=st.session_state.embeddings,
-                    top_k=top_k
+                    top_k_value=top_k,
                 )
 
             st.markdown("<div class='answer-box'>", unsafe_allow_html=True)
@@ -1002,106 +703,61 @@ with tab2:
 
             if relevant_chunks:
                 st.subheader("Most Relevant Source Chunks")
-
                 for chunk in relevant_chunks:
-                    with st.expander(
-                        f"{chunk['paper_name']} | Chunk {chunk['chunk_id']} | Score {chunk['score']:.4f}"
-                    ):
+                    with st.expander(f"{chunk['paper_name']} | Chunk {chunk['chunk_id']} | Score {chunk['score']:.4f}"):
                         st.write(chunk["text"])
 
 
-# -----------------------------
-# Tab 3: Research gaps and ideas
-# -----------------------------
-
 with tab3:
     st.markdown(
-        """
-<div class="section-card">
-    <div class="section-title">🔬 Cross-Paper Research Gaps and Ideas</div>
-    <div class="section-subtitle">
-        Generate cautious research gaps, possible hypotheses, experiment directions, novelty/feasibility/impact ratings,
-        and final research recommendations.
-    </div>
-</div>
-""",
-        unsafe_allow_html=True
+        '<div class="section-card"><div class="section-title">🔬 Cross-Paper Research Gaps and Ideas</div><div class="section-subtitle">Generate cautious research gaps, possible hypotheses, experiment directions, and final research recommendations.</div></div>',
+        unsafe_allow_html=True,
     )
 
     if st.button("🔬 Generate Research Gaps and Ideas"):
-        if st.session_state.knowledge_base.strip() == "":
+        if not st.session_state.knowledge_base.strip():
             st.error("Build the knowledge base first.")
-
         else:
             with st.spinner("Generating cross-paper research insights..."):
                 ideas = generate_cross_paper_ideas(st.session_state.knowledge_base)
                 st.session_state.cross_paper_ideas = ideas
 
-            st.success("Research ideas generated.")
+            if is_model_failure(ideas):
+                st.warning("Gemini failed or quota is exhausted. Try later or use increased quota.")
+            else:
+                st.success("Research ideas generated.")
 
     if st.session_state.cross_paper_ideas:
-        st.text_area(
-            "Cross-Paper Research Ideas",
-            st.session_state.cross_paper_ideas,
-            height=600
-        )
+        st.text_area("Cross-Paper Research Ideas", st.session_state.cross_paper_ideas, height=600)
 
-
-# -----------------------------
-# Tab 4: Experiments
-# -----------------------------
 
 with tab4:
     st.markdown(
-        """
-<div class="section-card">
-    <div class="section-title">🧪 Experiment Design Assistant</div>
-    <div class="section-subtitle">
-        Convert research ideas into structured experiment plans with variables, groups, measurement methods,
-        expected results, limitations, ethics, and significance.
-    </div>
-</div>
-""",
-        unsafe_allow_html=True
+        '<div class="section-card"><div class="section-title">🧪 Experiment Design Assistant</div><div class="section-subtitle">Convert research ideas into structured experiment plans with variables, groups, methods, limitations, ethics, and significance.</div></div>',
+        unsafe_allow_html=True,
     )
 
     if st.button("🧪 Generate Experiment Designs"):
-        if st.session_state.cross_paper_ideas.strip() == "":
+        if not st.session_state.cross_paper_ideas.strip():
             st.error("Generate research gaps and ideas first.")
-
         else:
             with st.spinner("Designing experiments..."):
-                experiment_plan = generate_experiment_plan(
-                    st.session_state.cross_paper_ideas
-                )
+                experiment_plan = generate_experiment_plan(st.session_state.cross_paper_ideas)
                 st.session_state.experiment_plan = experiment_plan
 
-            st.success("Experiment designs generated.")
+            if is_model_failure(experiment_plan):
+                st.warning("Gemini failed or quota is exhausted. Try later or use increased quota.")
+            else:
+                st.success("Experiment designs generated.")
 
     if st.session_state.experiment_plan:
-        st.text_area(
-            "Experiment Design Report",
-            st.session_state.experiment_plan,
-            height=600
-        )
+        st.text_area("Experiment Design Report", st.session_state.experiment_plan, height=600)
 
-
-# -----------------------------
-# Tab 5: Export
-# -----------------------------
 
 with tab5:
     st.markdown(
-        """
-<div class="section-card">
-    <div class="section-title">📥 Export Final Research Report</div>
-    <div class="section-subtitle">
-        Download a complete text report containing the paper knowledge base, cross-paper ideas,
-        and experiment design report.
-    </div>
-</div>
-""",
-        unsafe_allow_html=True
+        '<div class="section-card"><div class="section-title">📥 Export Final Research Report</div><div class="section-subtitle">Download the complete report containing the knowledge base, research ideas, and experiment design report.</div></div>',
+        unsafe_allow_html=True,
     )
 
     final_report = f"""
@@ -1130,7 +786,7 @@ NEUROSCHOLAR-AI PRO FINAL REPORT
         label="📥 Download Final Report",
         data=final_report,
         file_name="neuroscholar_final_report.txt",
-        mime="text/plain"
+        mime="text/plain",
     )
 
     st.text_area("Final Report Preview", final_report, height=600)
