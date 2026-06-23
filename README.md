@@ -79,9 +79,12 @@ Answer / Summary / Gaps / Hypotheses / Experiments / Report
 Add screenshots here after deployment:
 
 ```markdown
-![Home Page](screenshots/home.png)
-![Ask Anything](screenshots/ask.png)
-![Research Gaps](screenshots/gaps.png)
+![Home Page](<img width="1920" height="1080" alt="Screenshot (111)" src="https://github.com/user-attachments/assets/6d853558-a6db-4155-9100-368d3c58793b" />
+)
+![Ask Anything](<img width="1920" height="1080" alt="Screenshot (112)" src="https://github.com/user-attachments/assets/7e02e540-269f-4c79-b620-c231678bc296" />
+)
+![Research Gaps](<img width="1920" height="1080" alt="Screenshot (113)" src="https://github.com/user-attachments/assets/dde6a6f1-86f8-4d23-ba74-897a11b49f7a" />
+)
 ```
 
 ---
